@@ -1,0 +1,8 @@
+@use 'reset';
+@use './variables/'as *;
+
+header{
+    h1{
+        font:$font-size-l ;
+    }
+}
