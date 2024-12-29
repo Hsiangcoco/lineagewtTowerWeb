@@ -1,8 +1,92 @@
 @use 'reset';
-@use './variables/'as *;
+@use './variables/' as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
-header{
-    h1{
-        font:$font-size-l ;
+
+#LT-header {
+    font-family: 'Noto Sans TC';
+
+    .LT-title {
+        font-size: 20px;
+        margin: 30px 0 0 50px;
+        color: $color-secondary;
+        font-weight: 500;
+    }
+
+    .LT-Navber {
+        color: $color-secondary;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 35px;
+        font-weight: 500;
+
+        p {
+            padding: 15px;
+        }
+    }
+
+    .LT-announcement {
+        display: flex;
+        margin: 5px 25px 25px 50px;
+        padding: 5px 0;
+        background-color: $color-secondary-1;
+        width: 50%;
+        border: 2px solid $color-secondary;
+        border-radius: 5px;
+
+        .LT-announcement-1 {
+            display: flex;
+            margin: 0 15px;
+
+            p {
+                font-size: $font-size-xs;
+                color: red;
+            }
+        }
+
+        .LT-announcement-scroll {
+            p {
+                font-size: $font-size-xs;
+            }
+        }
+    }
+
+    .LT-bk-all {
+        border: 1px solid #ccc;
+        display: flex;
+        margin: 0 50px;
+
+        .LT-Navbar-imgScroll {
+            border: 2px solid $color-secondary;
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        .LT-bk-all-1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            .LT-News-bk-all {
+                margin-left: 50px;
+
+                .LT-News-title-1 {
+                    color: #222222d8;
+                    text-align: center;
+                }
+
+                .LT-News-content-1 {
+                    color: #222222d8;
+                    padding: 5px 0;
+                }
+            }
+        }
     }
 }
