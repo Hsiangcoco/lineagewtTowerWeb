@@ -1,8 +1,10 @@
 @use 'reset';
-@use './variables/'as *;
+@use './variables/' as *;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
 body {
+    font-family: "Noto Sans TC", serif;
+    ;
     background-image: url(../images/backimg-2.png);
     background-color: #F5DEB3;
 }
@@ -124,37 +126,150 @@ body {
 }
 
 #LT-MainBk-all {
+    height: 100vh;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
 
     .LT-gamenews-bk-all {
         display: flex;
         flex-wrap: wrap;
-
-        /* p {
-                padding: 10px;
-                position: absolute;
-                color: #ffffff;
-                top: 0;
-                font-size: 24px;
-            } */
+        width: 90%;
+        height: 90%;
 
         .LT-gamenews-bk-sm-1 {
-            flex: 1 1 calc(25% - 10px);
-            /* 每行 4 個 (25%)，扣除間距 */
+            margin: 10px;
+            width: calc(25% - 20px);
+            /* 每列最多 4 個，減去間距 */
+            box-sizing: border-box;
+            /* 確保 padding 不影響大小 */
+            background-color: #fff;
+            /* 背景設為白色 */
+            border: 1px solid #ddd;
+            /* 卡片外框 */
+            border-radius: 5px;
+            /* 卡片圓角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* 卡片陰影 */
+            overflow: hidden;
+            /* 避免內容溢出 */
+            text-align: left;
+            /* 文字靠左對齊 */
+            display: flex;
+            flex-direction: column;
+            /* 垂直排列圖片與文字 */
+            /* 圖片水平置中 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* 添加平滑過渡效果 */
+            position: relative;
+            /* 確保內部元素可以使用絕對定位 */
 
-            img {
-                border-radius: 15px;
-                object-fit: cover;
-                width: 139px;
-                height: 130px;
+            &:hover {
+                transform: scale(1.05);
+                /* 卡片放大 1.05 倍 */
+
+                img {
+                    filter: brightness(1.2);
+
+                }
             }
 
+            .overlay-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                /* 確保連結在最上層 */
+                background: transparent;
+                /* 保持透明 */
+            }
 
+            .news-title {
+                margin: 10px 15px 0;
+                /* 與邊框的間距 */
+                font-size: 1rem;
+                /* 文字大小 */
+                font-weight: bold;
+                /* 標題加粗 */
+                color: #333;
+                /* 文字顏色 */
+                line-height: 1.5;
+                /* 行距 */
+                overflow: hidden;
+                /* 避免文字溢出 */
+                white-space: normal;
+                /* 允許自動換行 */
+                word-wrap: break-word;
+                /* 長單字超出時換行 */
+                word-break: break-word;
+                /* 長單字在適當位置斷行 */
+            }
+
+            .news-date {
+                margin: auto 0 15px 15px;
+                /* 與標題和邊框的間距 */
+                font-size: 12px;
+                /* 日期文字大小 */
+                color: #999;
+                /* 日期文字顏色 */
+                text-align: left;
+                /* 日期靠左 */
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 70%;
+                transition: filter 0.3s ease;
+                /* 平滑過渡圖片效果 */
+
+            }
         }
 
     }
 }
 
+.LT-youtube-bk-all {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        width: 300px;
+        border: 3px solid #000000;
+        border-radius: 15px;
+        transition: border 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            transform: scale(0.98);
+            border: 5px solid #DAA520;
+        }
+    }
+
+    p {
+        /* 移除底線 */
+        color: #000000;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.LT-class-ba-all{
+    .LT-class-bk-1{
+        display: flex;
+        .classimg{
+            height: 272px;
+            width: 128px;
+        }
+    }
+}
 
 
 
