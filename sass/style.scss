@@ -1,0 +1,410 @@
+@use 'reset';
+@use './variables/'as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans TC", serif;
+    ;
+    background-image: url(../images/backimg-2.png);
+    background-color: #F5DEB3;
+    background-size: cover;
+}
+
+#LT-header {
+    font-family: 'Noto Sans TC';
+
+    .LT-topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid;
+        height: 10vh;
+
+        .LT-title {
+            font-size: 20px;
+            margin: 0 0 0 50px;
+            color: $color-secondary;
+            font-weight: 500;
+        }
+
+        .LT-Navber {
+            color: $color-secondary;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 35px;
+            font-weight: 500;
+
+            p {
+                margin: 15px;
+                padding: 5px 10px;
+                border: 1px solid;
+                background-color: #DAA520;
+                border-radius: 10px;
+                box-shadow: 2px 2px #000000;
+            }
+        }
+
+        .LT-announcement {
+            display: flex;
+            margin-right: 50px;
+            padding: 5px 0;
+            background-color: $color-secondary-1;
+            width: 50%;
+            border: 2px solid $color-secondary;
+            border-radius: 5px;
+
+            .LT-announcement-1 {
+                display: flex;
+                margin: 0 15px;
+
+                p {
+                    font-size: $font-size-xs;
+                    color: red;
+                }
+            }
+
+            .LT-announcement-scroll {
+                p {
+                    font-size: $font-size-xs;
+                }
+            }
+        }
+    }
+
+
+    .LT-bk-all {
+        .LT-Navbar-imgScroll {
+            position: relative;
+
+            .navbar-img1 {
+                object-fit: cover;
+                height: 80vh;
+            }
+
+            .arrow-left {
+                width: 48px;
+                left: 0;
+                top: 50%;
+                position: absolute;
+
+                .arrowleftcolor {
+                    fill: #ffffff;
+                }
+            }
+
+            .arrow-right {
+                width: 48px;
+                right: 0;
+                top: 50%;
+                position: absolute;
+
+                .arrowleftcolor {
+                    fill: #ffffff;
+                }
+            }
+        }
+    }
+
+    .LT-Navbar-bottom {
+        margin-top: 1px;
+        display: flex;
+        justify-content: space-between;
+        height: 5vh;
+
+        .LT-Navbar-bottom-bk-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .LT-Navbar-bottom-smimg {
+                width: 48px;
+                height: 48px;
+                object-fit: cover;
+
+            }
+        }
+    }
+}
+
+#LT-MainBk-all {
+    height: 100vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+    .LT-gamenews-bk-all {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        height: 90%;
+
+        .LT-gamenews-bk-sm-1 {
+            margin: 10px;
+            width: calc(25% - 20px);
+            /* 每列最多 4 個，減去間距 */
+            box-sizing: border-box;
+            /* 確保 padding 不影響大小 */
+            background-color: #fff;
+            /* 背景設為白色 */
+            border: 1px solid #ddd;
+            /* 卡片外框 */
+            border-radius: 5px;
+            /* 卡片圓角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* 卡片陰影 */
+            overflow: hidden;
+            /* 避免內容溢出 */
+            text-align: left;
+            /* 文字靠左對齊 */
+            display: flex;
+            flex-direction: column;
+            /* 垂直排列圖片與文字 */
+            /* 圖片水平置中 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* 添加平滑過渡效果 */
+            position: relative;
+            /* 確保內部元素可以使用絕對定位 */
+
+            &:hover {
+                transform: scale(1.05);
+                /* 卡片放大 1.05 倍 */
+
+                img {
+                    filter: brightness(1.2);
+
+                }
+            }
+
+            .overlay-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                /* 確保連結在最上層 */
+                background: transparent;
+                /* 保持透明 */
+            }
+
+            .news-title {
+                margin: 10px 15px 0;
+                /* 與邊框的間距 */
+                font-size: 1rem;
+                /* 文字大小 */
+                font-weight: bold;
+                /* 標題加粗 */
+                color: #333;
+                /* 文字顏色 */
+                line-height: 1.5;
+                /* 行距 */
+                overflow: hidden;
+                /* 避免文字溢出 */
+                white-space: normal;
+                /* 允許自動換行 */
+                word-wrap: break-word;
+                /* 長單字超出時換行 */
+                word-break: break-word;
+                /* 長單字在適當位置斷行 */
+            }
+
+            .news-date {
+                margin: auto 0 15px 15px;
+                /* 與標題和邊框的間距 */
+                font-size: 12px;
+                /* 日期文字大小 */
+                color: #999;
+                /* 日期文字顏色 */
+                text-align: left;
+                /* 日期靠左 */
+            }
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 70%;
+                transition: filter 0.3s ease;
+                /* 平滑過渡圖片效果 */
+
+            }
+        }
+
+    }
+}
+
+.LT-youtube-bk-all {
+
+    margin: 50px 150px;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        width: 300px;
+        border: 3px solid #000000;
+        border-radius: 15px;
+        transition: border 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+            transform: scale(0.98);
+            border: 5px solid #DAA520;
+        }
+    }
+
+    p {
+        /* 移除底線 */
+        color: #000000;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.LT-class-ba-all {
+    margin-top: 50px;
+
+    .LT-class-bk-1 {
+        display: flex;
+        justify-content: center;
+
+        .classimg {
+            position: relative;
+            width: 140%;
+            top: -15px;
+            left: -20px;
+        }
+
+        .class-1 {
+            border: 1px solid;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            height: 272px;
+            width: 128px;
+            margin: 5px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                filter: brightness(1.2);
+            }
+
+            a {
+                text-decoration: none;
+
+            }
+
+            .LT-class-textbg-1 {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 56px;
+
+            }
+
+            p {
+                color: #fff;
+                position: absolute;
+                bottom: 18px;
+                left: 33px;
+                font-size: 20px;
+            }
+        }
+
+    }
+}
+
+.LT-footer {
+    display: flex;
+    margin: 20px 50px;
+    background-image: url(../images/logoimgbk-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    .LT-footer-bg-1 {
+        padding: 0 30px 0 0;
+        text-align: center;
+
+        .LT-footer-titletop {
+            p {
+                color: #8B4513;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+
+            .LT-footer-content {
+                font-size: 0.8rem;
+
+                a {
+                    color: #000000;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+
+
+
+
+
+/* .LT-bk-all-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .LT-News-bk-all {
+        margin-left: 50px;
+
+        .LT-News-title-1 {
+            color: #222222d8;
+            text-align: center;
+        }
+
+        .LT-News-bk-sm-1 {
+            background-image: url(../images/news-img-bg.png);
+            background-position: center;
+            background-size: 307px 121px;
+            background-repeat: no-repeat;
+            width: 307px;
+            height: 121px;
+
+            .LT-News-content-1 {
+                color: #222222d8;
+                padding: 5px 0;
+                display: flex;
+
+                img {
+                    width: 24px;
+                    transform: scaleX(-1);
+                }
+
+                a {
+                    .LT-News-content-sm-1 {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 300px;
+                        text-overflow: ellipsis;
+                        font-size: 12px;
+
+
+                    }
+                }
+
+
+
+            }
+        }
+    }
+
+
+} */
