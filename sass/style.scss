@@ -1,5 +1,5 @@
 @use 'reset';
-@use './variables/' as *;
+@use './variables/'as *;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
 body {
@@ -7,6 +7,7 @@ body {
     ;
     background-image: url(../images/backimg-2.png);
     background-color: #F5DEB3;
+    background-size: cover;
 }
 
 #LT-header {
@@ -232,6 +233,8 @@ body {
 }
 
 .LT-youtube-bk-all {
+    margin-top: 50px;
+    margin: 50px 250px;
     display: flex;
     justify-content: space-around;
 
@@ -261,12 +264,90 @@ body {
     }
 }
 
-.LT-class-ba-all{
-    .LT-class-bk-1{
+.LT-class-ba-all {
+    margin-top: 50px;
+
+    .LT-class-bk-1 {
         display: flex;
-        .classimg{
+        justify-content: center;
+
+        .classimg {
+            position: relative;
+            width: 140%;
+            top: -15px;
+            left: -20px;
+        }
+
+        .class-1 {
+            border: 1px solid;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
             height: 272px;
             width: 128px;
+            margin: 5px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                filter: brightness(1.2);
+            }
+
+            a {
+                text-decoration: none;
+
+            }
+
+            .LT-class-textbg-1 {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 56px;
+
+            }
+
+            p {
+                color: #fff;
+                position: absolute;
+                bottom: 18px;
+                left: 33px;
+                font-size: 20px;
+            }
+        }
+
+    }
+}
+
+.LT-footer {
+    display: flex;
+    margin: 20px 50px;
+    background-image: url(../images/logoimgbk-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    .LT-footer-bg-1 {
+        padding: 0 30px 0 0;
+        text-align: center;
+
+        .LT-footer-titletop {
+            p {
+                color: #8B4513;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+
+            .LT-footer-content {
+                font-size: 0.8rem;
+
+                a {
+                    color: #000000;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
         }
     }
 }
