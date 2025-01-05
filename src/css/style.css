@@ -181,6 +181,8 @@ body {
 }
 #LT-header .LT-bg-navbar-1 .LT-bk-all-1 {
   display: flex;
+  border: 2px solid #D3A871;
+  border-radius: 5px;
 }
 #LT-header .LT-bg-navbar-1 .LT-bk-all-1 .update-log {
   display: flex;
@@ -321,17 +323,6 @@ body {
   position: relative;
   margin: 0 50px;
 }
-.LT-youtube-bk-all img {
-  width: 300px;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  margin-right: 30px;
-  transition: border 0.3s ease, transform 0.3s ease;
-}
-.LT-youtube-bk-all img:hover {
-  transform: scale(0.98);
-  border: 5px solid #DAA520;
-}
 .LT-youtube-bk-all .youtubearrow {
   position: absolute;
   z-index: 99;
@@ -357,7 +348,6 @@ body {
 }
 .LT-youtube-bk-all .youtube-carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
   width: 1000%;
   /* 假設有 10 個項目，根據實際數量調整 */
 }
@@ -372,14 +362,6 @@ body {
   border-radius: 10px;
   margin-right: 30px;
   object-fit: cover;
-  filter: grayscale(0);
-  /* 預設彩色 */
-  transition: filter 0.3s ease;
-  transition: border 0.3s ease, transform 0.3s ease;
-}
-.LT-youtube-bk-all .youtube-carousel img:hover {
-  transform: scale(0.98);
-  border: 5px solid #DAA520;
 }
 
 .LT-class-ba-all {
@@ -407,7 +389,7 @@ body {
 }
 .LT-class-ba-all .LT-class-bk-1 .class-1:hover {
   transform: scale(1.1);
-  filter: brightness(1.2);
+  filter: brightness(1.5);
 }
 .LT-class-ba-all .LT-class-bk-1 .class-1 a {
   text-decoration: none;

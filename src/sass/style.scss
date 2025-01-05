@@ -163,7 +163,8 @@ body {
 
         .LT-bk-all-1 {
             display: flex;
-
+            border: 2px solid $color-secondary; // 邊框色
+            border-radius: 5px;
             .update-log {
                 display: flex;
                 flex-direction: column;
@@ -333,20 +334,6 @@ body {
     position: relative;
     margin: 0 50px;
 
-
-    img {
-        width: 300px;
-        border: 1px solid #000000;
-        border-radius: 10px;
-        margin-right: 30px;
-        transition: border 0.3s ease, transform 0.3s ease;
-
-        &:hover {
-            transform: scale(0.98);
-            border: 5px solid #DAA520;
-        }
-    }
-
     .youtubearrow {
         position: absolute;
         z-index: 99;
@@ -356,7 +343,6 @@ body {
         transition: opacity 0.3s ease;
 
         &:hover {
-
             transform: scale(1.1);
             /* 懸停時不透明 */
         }
@@ -379,7 +365,6 @@ body {
 
     .youtube-carousel {
         display: flex;
-        transition: transform 0.5s ease-in-out;
         width: calc(100% * 10);
 
         /* 假設有 10 個項目，根據實際數量調整 */
@@ -395,15 +380,7 @@ body {
             border-radius: 10px;
             margin-right: 30px;
             object-fit: cover;
-            filter: grayscale(0);
-            /* 預設彩色 */
-            transition: filter 0.3s ease;
-            transition: border 0.3s ease, transform 0.3s ease;
-
-            &:hover {
-                transform: scale(0.98);
-                border: 5px solid #DAA520;
-            }
+        
         }
 
 
@@ -438,7 +415,7 @@ body {
 
             &:hover {
                 transform: scale(1.1);
-                filter: brightness(1.2);
+                filter: brightness(1.5);
             }
 
             a {
