@@ -315,29 +315,71 @@ body {
 }
 
 .LT-youtube-bk-all {
-  margin: 50px 150px;
   display: flex;
-  justify-content: space-around;
-}
-.LT-youtube-bk-all a {
-  text-decoration: none;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin: 0 50px;
 }
 .LT-youtube-bk-all img {
   width: 300px;
-  border: 3px solid #000000;
-  border-radius: 15px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin-right: 30px;
   transition: border 0.3s ease, transform 0.3s ease;
 }
 .LT-youtube-bk-all img:hover {
   transform: scale(0.98);
   border: 5px solid #DAA520;
 }
-.LT-youtube-bk-all p {
-  /* 移除底線 */
-  color: #000000;
+.LT-youtube-bk-all .youtubearrow {
+  position: absolute;
+  z-index: 99;
+  cursor: pointer;
+  height: 100%;
+  /* 預設半透明 */
+  transition: opacity 0.3s ease;
 }
-.LT-youtube-bk-all p:hover {
-  color: #fff;
+.LT-youtube-bk-all .youtubearrow:hover {
+  transform: scale(1.1);
+  /* 懸停時不透明 */
+}
+.LT-youtube-bk-all .youtubearrow svg {
+  margin-top: 55px;
+}
+.LT-youtube-bk-all .youtube-arrow-left {
+  background-image: linear-gradient(to right, #F0DAAE, rgba(184, 177, 177, 0));
+  left: -5px;
+}
+.LT-youtube-bk-all .youtube-arrow-right {
+  background-image: linear-gradient(to left, #F0DAAE, rgba(184, 177, 177, 0));
+  right: -5px;
+}
+.LT-youtube-bk-all .youtube-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 1000%;
+  /* 假設有 10 個項目，根據實際數量調整 */
+}
+.LT-youtube-bk-all .youtube-carousel a {
+  flex: 0 0 10%;
+  /* 每次顯示 5 個項目 */
+  box-sizing: border-box;
+}
+.LT-youtube-bk-all .youtube-carousel img {
+  width: 300px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin-right: 30px;
+  object-fit: cover;
+  filter: grayscale(0);
+  /* 預設彩色 */
+  transition: filter 0.3s ease;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+.LT-youtube-bk-all .youtube-carousel img:hover {
+  transform: scale(0.98);
+  border: 5px solid #DAA520;
 }
 
 .LT-class-ba-all {
