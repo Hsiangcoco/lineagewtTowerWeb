@@ -124,7 +124,8 @@ body {
   color: red;
   font-weight: bold;
 }
-#LT-header .LT-topbar .LT-announcement .LT-announcement-scroll p {
+#LT-header .LT-topbar .LT-announcement .LT-announcement-scroll li {
+  text-align: left;
   font-size: 0.8rem;
   color: #5A4636;
 }
