@@ -1,5 +1,5 @@
 @use 'reset';
-@use './variables/'as *;
+@use './variables/' as *;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
 body {
@@ -25,7 +25,7 @@ body {
             .LT-title {
                 position: relative;
                 font-size: 24px; // LOGO 字體大小
-                margin: 0 0 0 60px; // 與左側距離
+                margin: 0 30px 0 60px; // 與左側距離
                 color: #5A4636; // 深棕色字體，與背景形成良好對比
                 font-weight: 900; // 加粗字體，突顯 LOGO
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); // 添加立體感的陰影
@@ -53,6 +53,7 @@ body {
                 display: flex;
                 justify-content: flex-start;
                 font-weight: 500;
+                margin-right: 50px;
 
                 p {
                     margin: 15px;
@@ -76,7 +77,7 @@ body {
                 margin-right: 50px;
                 padding: 5px 0;
                 background-color: $color-secondary-1; // 背景色
-                width: 25%;
+                width: 30%;
                 border: 2px solid $color-secondary; // 邊框色
                 border-radius: 5px;
 
@@ -117,6 +118,7 @@ body {
                         align-items: center;
                         justify-content: space-between; // 左右箭頭分佈在兩端
                         position: relative;
+
                         a {
                             background-color: transparent !important;
 
@@ -292,10 +294,7 @@ body {
 .page-2 {
 
     #LT-MainBk-all {
-
-        display: flex;
-        justify-content: center;
-        margin: 0 50px;
+        margin: 30px 150px;
         /* 區域上下間距 */
         padding: 20px;
         /* 區域內間距 */
@@ -338,7 +337,8 @@ body {
 
             .LT-gamenews-bk-sm-1 {
                 margin: 10px;
-                width: 15%;
+                width: calc(18%); // 每行最多 4 個，減去間距
+                margin: 10px 50px; // 增加卡片間距
                 box-sizing: border-box; // 確保 padding 不影響大小
                 background-color: #FFF7E0; // 調整為柔和的奶油色背景
                 border: 1px solid #D3A871; // 使用金棕色作為卡片邊框
@@ -350,6 +350,8 @@ body {
                 flex-direction: column; // 垂直排列圖片與文字
                 transition: transform 0.3s ease, box-shadow 0.3s ease; // 添加平滑過渡效果
                 position: relative; // 確保內部元素可以使用絕對定位
+
+
 
                 &:hover {
                     transform: scale(1.05); // 卡片放大 1.05 倍
@@ -402,117 +404,167 @@ body {
 }
 
 .page-3 {
-    height: 100vh;
     display: flex;
     flex-direction: column;
 
-    .LT-youtube-bk-all {
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        position: relative;
-        margin: 50px 50px;
+    .LT-guide-videos-section {
+        padding: 20px;
+        background: linear-gradient(180deg, #FFF7E0 0%, #F0DAAE 100%);
+        border-radius: 15px;
+        margin: 50px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
-        .youtubearrow {
-            position: absolute;
-            z-index: 99;
-            cursor: pointer;
-            height: 60%;
-            /* 預設半透明 */
-            transition: opacity 0.3s ease;
-
-            &:hover {
-                transform: scale(1.1);
-                /* 懸停時不透明 */
-            }
-
-            svg {
-                margin-top: 55px;
-            }
+        .guide-videos-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            color: #5A4636;
+            margin-bottom: 10px;
         }
 
-        .youtube-arrow-left {
-            background-image: linear-gradient(to right, #F0DAAE, rgba(184, 177, 177, 0), );
-
-            left: -5px;
+        .guide-videos-description {
+            font-size: 1rem;
+            text-align: center;
+            color: #8B5E34;
+            margin-bottom: 30px;
         }
 
-        .youtube-arrow-right {
-            background-image: linear-gradient(to left, #F0DAAE, rgba(184, 177, 177, 0), );
-            right: -5px;
-        }
-
-        .youtube-carousel {
+        .LT-youtube-bk-all {
             display: flex;
             align-items: center;
-            width: calc(100% * 10);
-            height: 30vh;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
 
-            transition: transform 0.8s ease-in-out;
-            /* 平滑過渡效果，時間調整為 0.8s */
+            .youtubearrow {
+                position: absolute;
+                z-index: 99;
+                width: 48px;
+                height: 80%;
 
-            /* 假設有 10 個項目，根據實際數量調整 */
-            a {
-                flex: 0 0 10%;
-                /* 每次顯示 5 個項目 */
-                box-sizing: border-box;
-            }
+                cursor: pointer;
+                transition: transform 0.3s ease, opacity 0.3s ease;
 
-            img {
-                width: 300px;
-                border: 1px solid #000000;
-                border-radius: 10px;
-                margin-right: 30px;
-                object-fit: cover;
-                transition: transform 0.5s ease-in-out;
-
-                &:hover {
-                    transform: scale(1.1); // 卡片放大 1.05 倍
-                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); // 懸停時增加陰影
-
-                    img {
-                        filter: brightness(1.2); // 提升圖片亮度
-                    }
+                svg {
+                    margin-top: 70px;
+                    transition: transform 0.3s ease;
                 }
 
+                &:hover {
+                    svg {
+                        transform: scale(1.2);
+                    }
+                }
             }
 
+            .youtube-arrow-left {
+                left: 0;
+                background: linear-gradient(to right, #FFF7E0, rgba(255, 255, 255, 0));
+            }
 
+            .youtube-arrow-right {
+                right: 0;
+                background: linear-gradient(to left, #FFF7E0, rgba(255, 255, 255, 0));
+            }
+
+            .youtube-carousel {
+                display: flex;
+                align-items: center;
+                height: 25vh;
+                gap: 20px;
+                transition: transform 0.8s ease-in-out;
+
+                a {
+                    flex: 0 0 20%; // 每次顯示 5 個影片
+                    text-align: center;
+
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+                        }
+                    }
+                }
+            }
         }
-
-
     }
 
+
     .LT-class-ba-all {
-        margin: 50px 0;
+        padding: 40px 0;
+        background: #F0DAAE;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: inset 0 0 30px rgba(74, 59, 36, 0.08);
+        }
+
+        .profession-title {
+            position: relative;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #4A3B24;
+            font-size: 36px;
+            font-weight: bold;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 3px;
+                background: gold;
+                margin: 15px auto;
+            }
+        }
 
         .LT-class-bk-1 {
+            position: relative;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
 
             .classimg {
-                position: relative;
                 width: 150px;
-                height: 100%;
+                height: 200px;
                 object-fit: cover;
-                object-position: center;
+                object-position: top;
             }
 
             .class-1 {
-                border: 1px solid;
-                border-radius: 15px;
+                border: none;
+                border-radius: 12px;
                 position: relative;
                 overflow: hidden;
-                margin: 5px;
-                transition: transform 0.3s ease;
+                height: 200px;
+                display: flex;
+                align-items: flex-end;
+                box-shadow: 0 4px 15px rgba(139, 115, 85, 0.15);
+                transition: all 0.3s ease;
 
 
                 &:hover {
-                    transform: scale(1.1);
-                    filter: brightness(1.5);
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 20px rgba(139, 115, 85, 0.2);
 
                     .Professiontext {
                         opacity: 1;
+                        background: rgba(0, 0, 0, 0.5);
                     }
                 }
 
@@ -530,20 +582,32 @@ body {
                 }
 
                 .Professiontext {
-                    color: $link-hover-color;
                     position: absolute;
                     top: 0;
-                    font-size: 50px;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 32px;
+                    font-weight: bold;
                     opacity: 0;
-                    transition: opacity 0.3s ease; // 添加平滑過渡效果
-
-
+                    transition: all 0.3s ease;
+                    z-index: 1;
+                    background: linear-gradient(to bottom,
+                            rgba(74, 59, 36, 0.8),
+                            rgba(74, 59, 36, 0.6));
+                    backdrop-filter: blur(2px);
                 }
-            }
 
+            }
         }
+
     }
 }
+
 
 .LT-footer {
     display: flex;

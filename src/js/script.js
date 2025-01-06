@@ -66,8 +66,6 @@ $(function () {
     $('.LT-gamenews-bk-sm-1').smoove({
         offset:'20%' /* offset 整數預設為像素不能加引號 ％要加引號 */
     });
-
-
 })
 
 
