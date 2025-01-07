@@ -1,5 +1,5 @@
 @use 'reset';
-@use './variables/' as *;
+@use './variables/'as *;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
 body {
@@ -13,14 +13,28 @@ body {
 
 .page-1 {
 
-    height: 100vh;
+    min-height: 100vh;
+    /* 自適應內容高度，至少占滿一屏 */
 
     #LT-header {
         .LT-topbar {
             display: flex;
             justify-content: start;
             align-items: center;
+            flex-wrap: wrap;
+            /* 允許換行 */
+
             height: 8vh; // 設置高度
+
+            @media (max-width:1024px) {
+                height: 12vh;
+            }
+
+            @media (max-width:640px) {
+                height: 15vh;
+            }
+
+
 
             .LT-title {
                 position: relative;
@@ -32,6 +46,11 @@ body {
                 font-family: 'Georgia', serif; // 使用具有品牌感的字體（可替換）
                 letter-spacing: 1px; // 增加字母間距，提升辨識度
                 text-transform: uppercase; // 全部大寫，增加品牌感
+
+                @media (max-width:1024px) {
+                    margin: 0 15px 0 15px;
+                    flex: 1 1 100%;
+                }
 
                 // 背景裝飾
                 &::before {
@@ -54,6 +73,7 @@ body {
                 justify-content: flex-start;
                 font-weight: 500;
                 margin-right: 50px;
+
 
                 p {
                     margin: 15px;
@@ -81,14 +101,29 @@ body {
                 border: 2px solid $color-secondary; // 邊框色
                 border-radius: 5px;
 
+                @media (max-width:1024px) {
+                    width: 50%;
+                    flex: 1 1 100%;
+                    margin-bottom: 10px;
+                }
+
+                @media (max-width:640px) {
+                    margin: 0px;
+                }
+
                 .LT-announcement-1 {
                     display: flex;
                     margin: 0 15px;
+
+                    @media (max-width:640px) {
+                        margin: 0 10px;
+                    }
 
                     p {
                         font-size: $font-size-xs; // 小字體大小
                         color: $error-color; // 錯誤文字顏色
                         font-weight: bold;
+
                     }
                 }
 
@@ -109,6 +144,12 @@ body {
             display: flex;
             margin: 0 50px;
 
+            @media (max-width:1024px) {
+                display: flex;
+                margin: 0px;
+                flex-direction: column;
+            }
+
             .LT-bg-alltop {
                 padding-right: 30px;
 
@@ -128,168 +169,196 @@ body {
                                 height: 90vh;
                                 width: 75vw;
                                 border-radius: 15px;
-                            }
-                        }
 
-
-                        .arrow-left {
-                            width: 48px;
-                            left: 0;
-                            top: 50%;
-                            position: absolute;
-                            z-index: 999;
-                            cursor: pointer;
-
-                            &:hover {
-                                transform: scale(1.1); // 卡片放大 1.05 倍
-                                fill: $text-color; // 懸停時顏色改變
-
-                                .arrowleftcolor {
-                                    fill: $main-background // 懸停時顏色改變
+                                @media (max-width:1024px) {
+                                    width: 100vw;
+                                    height: 88vh;
                                 }
-                            }
 
-                            .arrowleftcolor {
-                                fill: $link-hover-color;
-
-                            }
-                        }
-
-                        .arrow-right {
-                            width: 48px;
-                            right: 0;
-                            top: 50%;
-                            position: absolute;
-                            z-index: 999;
-                            cursor: pointer;
-
-                            &:hover {
-                                transform: scale(1.1); // 卡片放大 1.05 倍
-                                fill: $text-color; // 懸停時顏色改變
-
-                                .arrowleftcolor {
-                                    fill: $main-background // 懸停時顏色改變
+                                @media (max-width:640px) {
+                                    height: 36vh;
+                                    object-fit: contain;
                                 }
-                            }
-
-                            .arrowleftcolor {
-                                fill: $link-hover-color;
                             }
                         }
                     }
-                }
 
-                .LT-Navbar-bottom {
-                    margin-top: 1px;
-                    display: flex;
-                    justify-content: space-between;
-                    height: 5vh;
 
-                    .LT-Navbar-bottom-bk-1 {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                    .arrow-left {
+                        width: 48px;
+                        left: 0;
+                        top: 50%;
+                        position: absolute;
+                        z-index: 999;
+                        cursor: pointer;
 
-                        .LT-Navbar-bottom-smimg {
-                            width: 48px;
-                            height: 48px;
-                            object-fit: cover;
+                        &:hover {
+                            transform: scale(1.1); // 卡片放大 1.05 倍
+                            fill: $text-color; // 懸停時顏色改變
 
+                            .arrowleftcolor {
+                                fill: $main-background // 懸停時顏色改變
+                            }
+                        }
+
+                        .arrowleftcolor {
+                            fill: $link-hover-color;
+
+                        }
+                    }
+
+                    .arrow-right {
+                        width: 48px;
+                        right: 0;
+                        top: 50%;
+                        position: absolute;
+                        z-index: 999;
+                        cursor: pointer;
+
+                        &:hover {
+                            transform: scale(1.1); // 卡片放大 1.05 倍
+                            fill: $text-color; // 懸停時顏色改變
+
+                            .arrowleftcolor {
+                                fill: $main-background // 懸停時顏色改變
+                            }
+                        }
+
+                        .arrowleftcolor {
+                            fill: $link-hover-color;
                         }
                     }
                 }
             }
 
-            .LT-bk-all-1 {
+        }
+
+        .LT-bk-all-1 {
+            display: flex;
+            border: 2px solid $color-secondary; // 邊框色
+            border-radius: 5px;
+
+            @media (max-width:1024px) {
+                display: block;
+                margin: 20px;
+            }
+
+            .update-log {
                 display: flex;
-                border: 2px solid $color-secondary; // 邊框色
-                border-radius: 5px;
+                flex-direction: column;
 
-                .update-log {
+                background-color: $background-color; // 主背景色
+                border-radius: 10px; // 圓角
+
+                padding: 20px;
+                color: $text-color; // 文字顏色
+                font-family: Arial, sans-serif;
+
+
+                // 標題區塊
+                .log-header {
+
                     display: flex;
-                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
 
-                    background-color: $background-color; // 主背景色
-                    border-radius: 10px; // 圓角
-
-                    padding: 20px;
-                    color: $text-color; // 文字顏色
-                    font-family: Arial, sans-serif;
-
-                    // 標題區塊
-                    .log-header {
-
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-bottom: 20px;
-
-                        h1 {
-                            font-size: 24px;
-                            font-weight: bold;
-                            color: $text-color;
-                        }
-
-                        .view-all {
-                            color: $text-color;
-                            font-size: 14px;
-                            text-decoration: none;
-
-                            &:hover {
-                                color: $link-hover-color; // 懸停時顏色改變
-                            }
-                        }
+                    h1 {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: $text-color;
                     }
 
-                    // 日誌內容區
-                    .log-content {
-                        height: 100%;
+                    .view-all {
+                        color: $text-color;
+                        font-size: 14px;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: $link-hover-color; // 懸停時顏色改變
+                        }
+                    }
+                }
+
+                // 日誌內容區
+                .log-content {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    @media (max-width:1024px) {
+                        display: flex;
+                        flex-direction: unset;
+                    }
+
+                    @media (max-width:640px) {
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-between;
+                    }
 
-                        .log-item {
+                    .log-item {
+                        display: flex;
+                        align-items: center;
+                        background-color: $item-background; // 條目背景色
+                        border-radius: 10px;
+                        border: 1px solid $border-color; // 添加邊框
+                        padding: 15px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 淡淡的陰影效果
+
+                        @media (max-width:1024px) {
                             display: flex;
-                            align-items: center;
-                            background-color: $item-background; // 條目背景色
-                            border-radius: 10px;
-                            border: 1px solid $border-color; // 添加邊框
-                            padding: 15px;
-                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 淡淡的陰影效果
+                            flex-direction: unset;
 
-                            // 日期區塊
-                            .log-date {
-                                font-size: 16px;
-                                color: $text-color; // 日期顏色
-                                width: 60px; // 固定寬度
-                                flex-shrink: 0; // 防止壓縮
+                            &:nth-child(n+4) {
+                                display: none;
+                            }
+                        }
+
+                        // 日期區塊
+                        .log-date {
+                            font-size: 16px;
+                            color: $text-color; // 日期顏色
+                            width: 60px; // 固定寬度
+                            flex-shrink: 0; // 防止壓縮
+
+                            @media (max-width:1440px) {
+                                width: 30px;
+                            }
+                        }
+
+                        // 詳細內容區塊
+                        .log-details {
+                            margin-left: 15px; // 與日期分開
+
+                            h2 {
+                                display: inline-block;
+                                /* 或 inline-block */
+                                font-size: 18px;
+                                font-weight: bold;
+                                margin: 0 0 5px 0; // 與段落的間距
+                                color: $text-color; // 標題文字顏色
+                                white-space: nowrap;
+                                /* 必須禁用換行 */
+                                text-overflow: ellipsis;
+
                             }
 
-                            // 詳細內容區塊
-                            .log-details {
-                                margin-left: 15px; // 與日期分開
+                            p {
+                                font-size: 14px;
+                                color: $text-color; // 描述文字顏色
+                                margin: 0;
 
-                                h2 {
-                                    font-size: 18px;
-                                    font-weight: bold;
-                                    margin: 0 0 5px 0; // 與段落的間距
-                                    color: $text-color; // 標題文字顏色
-                                }
-
-                                p {
-                                    font-size: 14px;
-                                    color: $text-color; // 描述文字顏色
-                                    margin: 0;
-                                }
                             }
                         }
                     }
                 }
             }
         }
-
     }
+
 }
+
 
 .page-2 {
 
@@ -310,6 +379,10 @@ body {
         /* 文本居中 */
         display: flex;
         flex-direction: column;
+
+        @media (max-width:1024px) {
+            margin: 20px;
+        }
 
         .update-info-title {
             font-size: 1.8rem;
@@ -351,6 +424,21 @@ body {
                 transition: transform 0.3s ease, box-shadow 0.3s ease; // 添加平滑過渡效果
                 position: relative; // 確保內部元素可以使用絕對定位
 
+                @media (max-width:1024px) {
+                    width: calc(30%);
+
+                    &:nth-child(n+6) {
+                        display: none;
+                    }
+                }
+
+                @media (max-width:640px) {
+                    width: calc(90%);
+
+                    &:nth-child(n+4) {
+                        display: none;
+                    }
+                }
 
 
                 &:hover {
@@ -360,6 +448,7 @@ body {
                     img {
                         filter: brightness(1.2); // 提升圖片亮度
                     }
+
                 }
 
                 .overlay-link {
@@ -378,10 +467,29 @@ body {
                     font-weight: bold; // 標題加粗
                     color: #5A4636; // 深棕色文字，與背景形成對比
                     line-height: 1.5; // 行距
-                    overflow: hidden; // 避免文字溢出
                     white-space: normal; // 允許自動換行
                     word-wrap: break-word; // 長單字超出時換行
-                    word-break: break-word; // 長單字在適當位置斷行
+
+                    @media (max-width:1440px) {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        /* 必須禁用換行 */
+                    }
+
+                    @media (max-width:640px) {
+                        width: calc(90%);
+                        white-space: normal;
+                        /* 允許換行 */
+                        overflow: visible;
+                        /* 移除超出隱藏 */
+                        text-overflow: unset;
+
+                        /* 取消省略號效果 */
+                        &:nth-child(n+4) {
+                            display:none;
+                        }
+                    }
                 }
 
                 .news-date {
@@ -436,18 +544,39 @@ body {
             overflow: hidden;
             margin: 0 auto;
 
+            @media (max-width:1024px) {
+                overflow: auto;
+                ;
+            }
+
             .youtubearrow {
                 position: absolute;
                 z-index: 99;
                 width: 48px;
-                height: 80%;
+                height: 90%;
+
+                @media (max-width:1440px) {
+                    height: 80%;
+                    ;
+                }
+
+                @media (max-width:1024px) {
+                    display: none;
+
+                    ;
+                }
 
                 cursor: pointer;
-                transition: transform 0.3s ease, opacity 0.3s ease;
+                transition: transform 0.3s ease,
+                opacity 0.3s ease;
 
                 svg {
                     margin-top: 70px;
                     transition: transform 0.3s ease;
+
+                    @media (max-width:1024px) {
+                        display: none;
+                    }
                 }
 
                 &:hover {
@@ -474,15 +603,27 @@ body {
                 gap: 20px;
                 transition: transform 0.8s ease-in-out;
 
+
+
+
                 a {
                     flex: 0 0 20%; // 每次顯示 5 個影片
                     text-align: center;
+
+                    @media (max-width:1024px) {
+                        flex: 0 0 50%;
+                    }
+                    @media (max-width:640px) {
+                        flex: 0 0 100%;
+                    }
 
                     img {
                         width: 100%;
                         border-radius: 10px;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                         transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                        @media (max-width:1440px) {}
 
                         &:hover {
                             transform: scale(1.1);
@@ -600,6 +741,12 @@ body {
                             rgba(74, 59, 36, 0.8),
                             rgba(74, 59, 36, 0.6));
                     backdrop-filter: blur(2px);
+
+                    @media (max-width:1024px) {
+                        background: none;
+                        backdrop-filter: blur(0px);
+                        opacity: 1;
+                    }
                 }
 
             }
