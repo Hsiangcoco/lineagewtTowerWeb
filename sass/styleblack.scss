@@ -1,0 +1,679 @@
+@use 'reset';
+@use './variables/'as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%); // 深色漸變背景
+    color: #fff; // 白色文字
+    background-size: cover; // 背景自適應
+    background-attachment: fixed; // 背景固定
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; // 隱藏橫向滾動
+}
+
+// 滾動條樣式
+::-webkit-scrollbar {
+    width: 10px; // 滾動條寬度
+}
+
+::-webkit-scrollbar-track { 
+    background: #1a1a1a; // 滾動條背景
+}
+
+::-webkit-scrollbar-thumb {
+    background: gold; // 滾動條為金色
+    border-radius: 5px; // 圓角
+}
+
+.page-1 {
+    /*     background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%); // 深色背景
+ */
+    color: #fff; // 白色文字
+
+    height: 100vh;
+
+    #LT-header {
+        .LT-topbar {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            height: 8vh; // 設置高度
+
+            .LT-title {
+                position: relative;
+                font-size: 24px; // LOGO 字體大小
+                margin: 0 30px 0 60px; // 與左側距離
+                color: gold; // 金色文字
+                font-weight: 900; // 加粗字體，突顯 LOGO
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // 深色陰影
+                font-family: 'Georgia', serif; // 使用具有品牌感的字體（可替換）
+                letter-spacing: 1px; // 增加字母間距，提升辨識度
+                text-transform: uppercase; // 全部大寫，增加品牌感
+
+                // 背景裝飾
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -10px;
+                    transform: translateY(-50%);
+                    width: 10px;
+                    height: 40px;
+                    background-color: gold; // 金色裝飾
+                    border-radius: 5px;
+                    margin-right: 10px;
+                }
+            }
+
+            .LT-Navber {
+                color: $text-color; // 主文字色
+                display: flex;
+                justify-content: flex-start;
+                font-weight: 500;
+                margin-right: 50px;
+
+                p {
+                    margin: 15px;
+                    padding: 5px 10px;
+                    border: 1px solid gold; // 金色邊框
+                    background-color: $highlight-color; // 背景色
+                    border-radius: 10px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                    color: #fff;
+
+                    &:hover {
+                        background-color: gold; // 懸停金色背景
+                        color: #1a1a1a; // 文字切換為深色
+                        box-shadow: 0 2px 8px rgba(255, 215, 0, 0.5); // 金色光暈
+                    }
+                }
+            }
+
+            .LT-announcement {
+                display: flex;
+                margin-right: 50px;
+                padding: 5px 0;
+                background-color: rgba(255, 215, 0, 0.2); // 金色半透明背景
+                width: 30%;
+                border: 2px solid gold;
+                border-radius: 5px;
+
+                .LT-announcement-1 {
+                    display: flex;
+                    margin: 0 15px;
+
+                    p {
+                        font-size: $font-size-xs; // 小字體大小
+                        color: gold; // 金色文字
+                        font-weight: bold;
+                    }
+                }
+
+                .LT-announcement-scroll {
+
+                    li {
+
+                        text-align: left;
+                        font-size: $font-size-xs; // 小字體大小
+
+                        a {
+                            color: #fff; // 白色文字
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .LT-bg-navbar-1 {
+
+            display: flex;
+            margin: 0 50px;
+
+            .LT-bg-alltop {
+                padding-right: 30px;
+
+                .LT-bk-all {
+                    .LT-Navbar-imgScroll {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between; // 左右箭頭分佈在兩端
+                        position: relative;
+
+                        a {
+                            background-color: transparent !important;
+
+                            .navbar-img1 {
+                                object-fit: cover;
+                                overflow: hidden;
+                                height: 90vh;
+                                width: 75vw;
+                                border-radius: 15px;
+                                border: 2px solid gold; // 圖片邊框金色
+                                box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3); // 金色光暈
+
+                            }
+                        }
+
+
+                        .arrow-left {
+                            width: 48px;
+                            left: 0;
+                            top: 50%;
+                            position: absolute;
+                            z-index: 999;
+                            cursor: pointer;
+
+                            &:hover {
+                                transform: scale(1.2); // 卡片放大 1.05 倍
+                                fill: $text-color; // 懸停時顏色改變
+
+                                .arrowleftcolor {
+                                    fill: gold; // 懸停金色箭頭
+                                }
+                            }
+
+                            .arrowleftcolor {
+                                fill: #fff; // 初始為白色
+
+                            }
+                        }
+
+                        .arrow-right {
+                            width: 48px;
+                            right: 0;
+                            top: 50%;
+                            position: absolute;
+                            z-index: 999;
+                            cursor: pointer;
+
+                            &:hover {
+                                transform: scale(1.2); // 卡片放大 1.05 倍
+                                fill: $text-color; // 懸停時顏色改變
+
+                                .arrowleftcolor {
+                                    fill: gold; // 懸停金色箭頭
+                                }
+                            }
+
+                            .arrowleftcolor {
+                                fill: #fff; // 初始為白色
+                            }
+                        }
+                    }
+                }
+
+                .LT-Navbar-bottom {
+                    margin-top: 1px;
+                    display: flex;
+                    justify-content: space-between;
+                    height: 5vh;
+
+                    .LT-Navbar-bottom-bk-1 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .LT-Navbar-bottom-smimg {
+                            width: 48px;
+                            height: 48px;
+                            object-fit: cover;
+
+                        }
+                    }
+                }
+            }
+
+            .LT-bk-all-1 {
+                display: flex;
+                border: 2px solid gold; // 金色邊框
+                border-radius: 15px;
+
+                .update-log {
+                    display: flex;
+                    flex-direction: column;
+
+                    background-color: rgba(0, 0, 0, 0.7); // 黑色半透明背景
+                    border-radius: 15px; // 圓角
+
+                    padding: 20px;
+                    color: #fff;
+                    font-family: Arial, sans-serif;
+
+                    // 標題區塊
+                    .log-header {
+
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        h1 {
+                            font-size: 24px;
+                            font-weight: bold;
+                            color: gold; // 金色標題
+                        }
+
+                        .view-all {
+                            color: #fff;
+                            font-size: 14px;
+                            text-decoration: none;
+
+                            &:hover {
+                                color: gold; // 懸停金色
+                            }
+                        }
+                    }
+
+                    // 日誌內容區
+                    .log-content {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .log-item {
+                            display: flex;
+                            align-items: center;
+                            background-color: rgba(0, 0, 0, 0.5);
+                            border-radius: 10px;
+                            border: 1px solid gold;
+                            padding: 15px;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+                            // 日期區塊
+                            .log-date {
+                                font-size: 16px;
+                                color: gold; // 金色日期
+                                width: 60px; // 固定寬度
+                                flex-shrink: 0; // 防止壓縮
+                            }
+
+                            // 詳細內容區塊
+                            .log-details {
+                                margin-left: 15px; // 與日期分開
+
+                                h2 {
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    margin: 0 0 5px 0; // 與段落的間距
+                                    color: #fff;
+                                }
+
+                                p {
+                                    font-size: 14px;
+                                    color: rgba(255, 255, 255, 0.8); // 白色文字
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.page-2 {
+
+    #LT-MainBk-all {
+        margin: 30px 150px;
+        /* 區域上下間距 */
+        padding: 20px;
+        /* 區域內間距 */
+        background-color: #FFF3E6;
+        /* 柔和背景色 */
+        border: 2px solid gold; // 金色邊框
+        /* 金棕色邊框 */
+        border-radius: 10px;
+        /* 圓角邊框 */
+        box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); // 金色光暈陰影
+        /* 淡淡的陰影效果 */
+        text-align: center;
+        /* 文本居中 */
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%); // 深色漸變背景
+
+
+        .update-info-title {
+            font-size: 2rem; // 大標題字體大小
+            /* 大標題字體大小 */
+            font-weight: bold;
+            color: gold; // 金色文字
+            /* 深棕色文字 */
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); // 金色光暈效果
+
+        }
+
+        .update-info-description {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8); // 白色文字，稍微透明
+            /* 較淺的棕色 */
+            margin-bottom: 20px;
+            /* 與內容區的間距 */
+        }
+
+        .LT-gamenews-bk-all {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* 水平居中內容 */
+
+
+            .LT-gamenews-bk-sm-1 {
+                margin: 10px;
+                width: calc(18%); // 每行最多 4 個，減去間距
+                margin: 10px 50px; // 增加卡片間距
+                box-sizing: border-box; // 確保 padding 不影響大小
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); // 深色漸變背景
+                border: 1px solid gold; // 金色邊框
+                border-radius: 15px; // 卡片圓角
+                box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2); // 提升陰影效果
+                overflow: hidden; // 避免內容溢出
+                text-align: left; // 文字靠左對齊
+                display: flex;
+                flex-direction: column; // 垂直排列圖片與文字
+                transition: transform 0.3s ease, box-shadow 0.3s ease; // 添加平滑過渡效果
+                position: relative; // 確保內部元素可以使用絕對定位
+
+                &:hover {
+                    transform: scale(1.05); // 卡片放大 1.05 倍
+                    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.5); // 懸停時增加金色光暈
+
+                    img {
+                        filter: brightness(1.2); // 提升圖片亮度
+                    }
+                }
+
+                .overlay-link {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1; // 確保連結在最上層
+                    background: transparent; // 保持透明
+                }
+
+                .news-title {
+                    margin: 10px 15px 0; // 與邊框的間距
+                    font-size: 1rem; // 文字大小
+                    font-weight: bold; // 標題加粗
+                    color: #fff; // 白色文字
+                    line-height: 1.5; // 行距
+                    overflow: hidden; // 避免文字溢出
+                    white-space: normal; // 允許自動換行
+                    word-wrap: break-word; // 長單字超出時換行
+                    word-break: break-word; // 長單字在適當位置斷行
+                }
+
+                .news-date {
+                    margin: auto 0 15px 15px; // 與標題和邊框的間距
+                    font-size: 12px; // 日期文字大小
+                    color: rgba(255, 215, 0, 0.8); // 金色文字，稍微透明
+                    text-align: left; // 日期靠左
+                }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 70%;
+                    transition: filter 0.3s ease; // 平滑過渡圖片效果
+                    border-bottom: 1px solid gold; // 圖片與文字間分割線
+                }
+            }
+        }
+    }
+}
+
+.page-3 {
+    display: flex;
+    flex-direction: column;
+
+    .LT-guide-videos-section {
+        padding: 20px;
+        background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%); // 深色漸變背景
+        border-radius: 15px;
+        margin: 50px auto;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); // 金色光暈陰影
+
+        .guide-videos-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            color: gold; // 金色標題文字
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); // 金色光暈效果
+
+        }
+
+        .guide-videos-description {
+            font-size: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8); // 白色稍透明文字
+            margin-bottom: 30px;
+        }
+
+        .LT-youtube-bk-all {
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+
+            .youtubearrow {
+                position: absolute;
+                z-index: 99;
+                width: 48px;
+                height: 90%;
+
+                cursor: pointer;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+
+                svg {
+                    fill: gold; // 金色箭頭
+
+                    margin-top: 150%;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover {
+                    svg {
+                        transform: scale(1.2);
+                        fill: rgba(255, 215, 0, 0.8); // 懸停金色光暈效果
+
+                    }
+                }
+            }
+
+            .youtube-arrow-left {
+                left: 0;
+                background: linear-gradient(to right, #1a1a1a, rgba(26, 26, 26, 0));
+            }
+
+            .youtube-arrow-right {
+                right: 0;
+                background: linear-gradient(to left, #1a1a1a, rgba(26, 26, 26, 0));
+            }
+
+            .youtube-carousel {
+                display: flex;
+                align-items: center;
+                height: 30vh;
+                gap: 20px;
+                transition: transform 0.8s ease-in-out;
+
+                a {
+                    flex: 0 0 20%; // 每次顯示 5 個影片
+                    text-align: center;
+
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2); // 金色光暈陰影
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            box-shadow: 0 6px 12px rgba(255, 215, 0, 0.5); // 懸停金色光暈
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .LT-class-ba-all {
+        padding: 40px 0;
+
+        .profession-title {
+            position: relative;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+
+
+            &:after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 3px;
+                background: gold;
+                margin: 15px auto;
+            }
+        }
+
+        .LT-class-bk-1 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            .classimg {
+                width: 150px;
+                height: 200px;
+                object-fit: cover;
+                object-position: top;
+            }
+
+            .class-1 {
+                border: 2px solid gold;
+                background: rgba(0, 0, 0, 0.5);
+
+                border-radius: 12px;
+                position: relative;
+                overflow: hidden;
+                height: 200px;
+                display: flex;
+                align-items: flex-end;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease;
+
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+
+                    .Professiontext {
+                        opacity: 1;
+                        box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+
+                }
+
+                .LT-class-textbg-1 {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 56px;
+
+                }
+
+                .Professiontext {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 32px;
+                    font-weight: bold;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                    z-index: 1;
+                    background: linear-gradient(to bottom,
+                            rgba(74, 59, 36, 0.8),
+                            rgba(74, 59, 36, 0.6));
+                    backdrop-filter: blur(2px);
+                }
+
+            }
+        }
+
+    }
+}
+
+
+.LT-footer {
+    display: flex;
+    margin: 20px 50px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%); // 深色漸變背景
+    border-radius: 10px; // 圓角背景框
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); // 金色光暈陰影
+    margin: 20px 50px;
+    padding: 20px;
+
+    background-image: url(../images/logoimgbk-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    .LT-footer-bg-1 {
+        padding: 0 30px 0 0;
+        text-align: center;
+
+        .LT-footer-titletop {
+            p {
+                color: gold; // 金色文字
+                font-size: 1.2rem; // 標題字體大小
+                font-weight: bold; // 加粗字體
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); // 金色光暈效果
+                margin: 0;
+            }
+
+            .LT-footer-content {
+                font-size: 1rem;
+                color: rgba(255, 255, 255, 0.8); // 白色稍透明文字
+
+
+                a {
+                    color: gold; // 金色鏈接
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: rgba(255, 215, 0, 0.8); // 懸停金色光暈
+                    }
+                }
+            }
+        }
+    }
+}
