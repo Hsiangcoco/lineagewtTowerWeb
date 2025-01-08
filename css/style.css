@@ -75,7 +75,7 @@ body {
 }
 @media (max-width: 640px) {
   .page-1 #LT-header .LT-topbar {
-    height: 20vh;
+    height: 25vh;
   }
 }
 .page-1 #LT-header .LT-topbar .LT-title {
