@@ -337,6 +337,12 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 1024px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg {
+    justify-content: center;
+    margin: 0px;
+  }
+}
 @media (max-width: 640px) {
   #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg {
     margin: 0px;
@@ -344,6 +350,15 @@ body {
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card {
   margin: 30px;
+}
+@media (max-width: 1024px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card {
+    width: 100%;
+    margin-top: 15px;
+  }
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card:nth-child(n+5) {
+    display: none;
+  }
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern {
   width: 350px;

@@ -327,12 +327,24 @@ body {
                 margin: 0 30px;
                 display: flex;
                 flex-wrap: wrap;
+                @media (max-width:1024px) {
+                  justify-content: center;
+                  margin: 0px;
+                }
 
                 @media (max-width:640px) {
                     margin: 0px;
                 }
                 .news-card {
                     margin: 30px;
+                    @media (max-width:1024px) {
+                        width: 100%;
+                        margin-top: 15px;
+    
+                        &:nth-child(n+5) {
+                            display: none;
+                        }
+                    }
                     &.modern {
                         width: 350px;
                         background: white;
