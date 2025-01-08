@@ -114,9 +114,6 @@ body {
   font-weight: 500;
   margin-right: 50px;
 }
-.page-1 #LT-header .LT-topbar .LT-Navber a {
-  text-decoration: none;
-}
 .page-1 #LT-header .LT-topbar .LT-Navber a p {
   margin: 15px;
   padding: 5px 10px;
@@ -308,6 +305,7 @@ body {
   }
 }
 .page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item {
+  cursor: pointer;
   display: flex;
   align-items: center;
   background-color: #FFF7E0;
@@ -315,6 +313,11 @@ body {
   border: 1px solid #D3A871;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+.page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 1024px) {
   .page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item {

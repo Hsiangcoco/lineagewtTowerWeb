@@ -75,7 +75,7 @@ body {
                 margin-right: 50px;
 
                 a {
-                    text-decoration: none;
+
                     p {
                         margin: 15px;
                         padding: 5px 10px;
@@ -301,6 +301,7 @@ body {
                     }
 
                     .log-item {
+                        cursor: pointer;
                         display: flex;
                         align-items: center;
                         background-color: $item-background; // 條目背景色
@@ -308,6 +309,12 @@ body {
                         border: 1px solid $border-color; // 添加邊框
                         padding: 15px;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 淡淡的陰影效果
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                            transform: translateX(5px);
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                        }
 
                         @media (max-width:1024px) {
                             display: flex;
