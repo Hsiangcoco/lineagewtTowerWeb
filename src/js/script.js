@@ -98,12 +98,40 @@ $(function () {
         }); // 延遲 300 毫秒
     });
 
+
+    function loadMore() {
+        // 原始資料模板
+        const template = `
+    <div class="gamenews-content-textbox">
+        <div class="gamenews-content-textbox-1">
+            <img src="./images/gamenews-content-img-1.png" alt="">
+            <a href="#">
+                <p>[說明] 1/8(三) 「白金通行證(21日)」商品說明(骷髏世界除外)(更新)</p>
+            </a>
+        </div>
+        <div class="gamenews-content-text-1">
+            <p>天堂Ｗ攻略聖所</p>
+            <p>2025/01/07</p>
+        </div>
+    </div>
+`;
+
+        // 獲取更多內容的容器
+        const moreContent = document.getElementById('more-content');
+
+        // 顯示隱藏的內容
+        moreContent.classList.remove('hidden');
+
+        // 添加10筆新資料
+        for (let i = 0; i < 10; i++) {
+            moreContent.insertAdjacentHTML('beforeend', template);
+        }
+    }
+    
+
+    $(".load-more-btn").click(function () {
+        loadMore()
+    });
 })
-
-
-
-
-
-
 
 

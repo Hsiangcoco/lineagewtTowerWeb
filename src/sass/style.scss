@@ -37,7 +37,9 @@ body {
 
 
             .LT-title {
+                display: flex;
                 position: relative;
+                align-items: center;
                 font-size: 24px; // LOGO 字體大小
                 margin: 0 30px 0 60px; // 與左側距離
                 color: #5A4636; // 深棕色字體，與背景形成良好對比
@@ -47,6 +49,21 @@ body {
                 letter-spacing: 1px; // 增加字母間距，提升辨識度
                 text-transform: uppercase; // 全部大寫，增加品牌感
 
+                .logoimg {
+                    height: 90px;
+                    width: 100px;
+                    margin: 0 -20px;
+
+                    @media (max-width:1024px) {
+                        height: 45px;
+                    }
+
+                    @media (max-width:640px) {
+                        height: 45px;
+                        width: 100px;
+                    }
+
+                }
                 @media (max-width:1024px) {
                     margin: 0 15px 0 15px;
                     flex: 1 1 100%;
