@@ -216,6 +216,8 @@ body {
   border-radius: 15px;
   background-image: url(../images/gamenews-img-1.png);
   background-position: -550px center;
+  font-weight: bold;
+  font-family: "Georgia", serif;
   /*img{
       position: relative;
       z-index: -2; */
@@ -427,6 +429,10 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  cursor: pointer;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-right .gamenews-top-1 .item a {
+  color: #000;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-right .gamenews-top-1 .item:hover {
   background: rgba(255, 255, 255, 0.8);

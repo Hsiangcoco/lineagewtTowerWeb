@@ -104,7 +104,7 @@ $(function () {
         const template = `
     <div class="gamenews-content-textbox">
         <div class="gamenews-content-textbox-1">
-            <img src="./images/gamenews-content-img-1.png" alt="">
+            <img src="../images/gamenews-content-img-1.png" alt="">
             <a href="#">
                 <p>[說明] 1/8(三) 「白金通行證(21日)」商品說明(骷髏世界除外)(更新)</p>
             </a>

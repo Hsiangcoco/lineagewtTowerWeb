@@ -184,9 +184,11 @@ body {
                 position: relative;
                 /* height: 186px;
                 width: 976px; */
-                border-radius: 15px;
+                border-radius: 15px; 
                 background-image: url(../images/gamenews-img-1.png);
                 background-position: -550px center;
+                font-weight: bold;
+                font-family: 'Georgia', serif;
                 /*img{
                     position: relative;
                     z-index: -2; */
@@ -426,6 +428,11 @@ body {
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
+                    cursor: pointer;
+                    a{
+                        color: #000;
+                    }
+
 
                     &:hover {
                         background: rgba(255, 255, 255, 0.8);

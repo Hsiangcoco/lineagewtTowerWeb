@@ -192,11 +192,6 @@ body {
 #gamenews-page-all {
   margin: 0 50px;
 }
-@media (max-width: 640px) {
-  #gamenews-page-all {
-    margin: 0 10px;
-  }
-}
 #gamenews-page-all #gamenews-page-2 {
   display: flex;
   justify-content: space-around;
@@ -207,7 +202,6 @@ body {
   }
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left {
-  width: 100%;
   margin-right: 50px;
 }
 @media (max-width: 640px) {
@@ -260,194 +254,170 @@ body {
     line-height: 100px;
   }
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 30px;
-  background-color: #FDF5E6;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(139, 115, 85, 0.1);
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-header {
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #E8D5C4;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-header .product-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: #5A4636;
-  margin-bottom: 10px;
-}
-@media (max-width: 640px) {
-  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-header .product-title {
-    font-size: 22px;
-  }
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-header .product-date {
-  font-size: 14px;
-  color: #8B7355;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content {
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote {
   display: flex;
-  gap: 30px;
-  margin-bottom: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 30px;
+  height: 45vh;
 }
 @media (max-width: 640px) {
-  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content {
-    flex-direction: column;
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote {
+    height: 100%;
   }
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content .product-image {
-  flex: 0 0 300px;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div {
+  border: 2px solid;
+  width: 40%;
+  height: 40%;
+  margin-right: 30px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 14px 14px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 @media (max-width: 640px) {
-  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content .product-image {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div {
+    width: 100%;
+    margin-top: 15px;
+  }
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div:nth-child(n+3) {
     display: none;
   }
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content .product-image img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(139, 115, 85, 0.15);
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div:hover {
+  transform: translateY(-5px);
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content .product-info {
-  flex: 1;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.085), rgba(0, 0, 0, 0.183));
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content .product-info .greeting {
-  font-size: 20px;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote p {
+  position: relative;
+  color: #fff;
+  font-size: 24px;
   font-weight: bold;
-  color: #5A4636;
-  margin-bottom: 15px;
+  padding: 12px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 640px) {
-  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content .product-info .greeting {
-    font-size: 16px;
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote p {
+    font-size: 20px;
   }
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content .product-info .intro,
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .product-content .product-info .detail-note {
-  margin-bottom: 15px;
-  color: #8B7355;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote .gamenews-hotnote-1 {
+  background-image: url(../images/gamenews-img-big.png);
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .sales-info {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  border: 1px solid #E8D5C4;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote .gamenews-hotnote-2 {
+  background-image: url(../images/gamenote-img-4.png);
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .sales-info h3 {
-  color: #5A4636;
-  font-weight: bold;
-  margin-bottom: 15px;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote .gamenews-hotnote-3 {
+  background-image: url(../images/gamenews-img-2.webp);
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .sales-info ul {
-  list-style: none;
-  margin-bottom: 15px;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote .gamenews-hotnote-4 {
+  background-image: url(../images/gamenote-img-big.png);
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .sales-info ul li {
-  color: #8B7355;
-  margin-bottom: 8px;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .sales-info .price-note {
-  color: #DAA520;
-  font-size: 14px;
-  font-weight: bold;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .items-info {
-  margin-bottom: 30px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #E8D5C4;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .items-info h3 {
-  color: #5A4636;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .items-info ul {
-  list-style: none;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .items-info ul li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-  color: #8B7355;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .items-info ul li::before {
-  content: "-";
-  position: absolute;
-  left: 0;
-  color: #5A4636;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .notice-info {
-  background-color: #FFF8DC;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  border: 1px solid #E8D5C4;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .notice-info h3 {
-  color: #8B7355;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .notice-info ul {
-  list-style: none;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .notice-info ul li {
-  margin-bottom: 10px;
-  color: #8B7355;
-  padding-left: 20px;
-  position: relative;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .notice-info ul li::before {
-  content: "※";
-  position: absolute;
-  left: 0;
-  color: #DAA520;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .ad-section {
-  margin: 40px 0;
-  padding: 20px;
-  background-color: #fff;
-  text-align: center;
-  border-radius: 8px;
-  border: 1px solid #E8D5C4;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .related-articles {
-  border-top: 2px solid #E8D5C4;
-  padding-top: 30px;
-  margin-top: 30px;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .related-articles h3 {
-  font-size: 18px;
-  color: #5A4636;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .related-articles ul {
-  list-style: none;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg {
+  background-color: #FDF5E6;
+  border: 1px solid #8B4513;
+  border-radius: 15px;
+  margin: 0 30px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .related-articles ul li a {
-  color: #8B7355;
+@media (max-width: 640px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg {
+    margin: 0px;
+  }
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card {
+  margin: 30px;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern {
+  width: 350px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern:hover {
+  transform: translateY(-5px);
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-image .image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-image .image-overlay h2 {
+  margin: 0 0 5px 0;
+  font-size: 24px;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-image .image-overlay span {
+  font-size: 14px;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-content {
+  padding: 20px;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-content a {
+  display: block;
+  color: #333;
   text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-content a:hover {
+  color: #0066cc;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-footer .author {
   display: flex;
   align-items: center;
-  transition: color 0.3s ease;
+  gap: 10px;
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .related-articles ul li a:hover {
-  color: #DAA520;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-footer .author img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .related-articles ul li a::before {
-  content: "✓";
-  margin-right: 8px;
-  color: #DAA520;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-footer .author span {
+  color: #333;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .news-card.modern .card-footer time {
+  color: #666;
+  font-size: 14px;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-right {
   width: 20vw;
@@ -465,7 +435,6 @@ body {
 @media (max-width: 640px) {
   #gamenews-page-all #gamenews-page-2 .gamenews-page-right {
     margin: 10px;
-    width: 90vw;
   }
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-right .gamenews-top-1 {
@@ -635,4 +604,4 @@ body {
 }
 .LT-footer .LT-footer-bg-1 a {
   text-decoration: none;
-}/*# sourceMappingURL=notice.css.map */
+}/*# sourceMappingURL=gameupdata.css.map */
