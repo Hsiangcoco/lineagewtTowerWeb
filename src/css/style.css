@@ -75,7 +75,7 @@ body {
 }
 @media (max-width: 640px) {
   .page-1 #LT-header .LT-topbar {
-    height: 15vh;
+    height: 25vh;
   }
 }
 .page-1 #LT-header .LT-topbar .LT-title {
@@ -114,7 +114,10 @@ body {
   font-weight: 500;
   margin-right: 50px;
 }
-.page-1 #LT-header .LT-topbar .LT-Navber p {
+.page-1 #LT-header .LT-topbar .LT-Navber a {
+  text-decoration: none;
+}
+.page-1 #LT-header .LT-topbar .LT-Navber a p {
   margin: 15px;
   padding: 5px 10px;
   border: 1px solid #D3A871;
@@ -123,7 +126,7 @@ body {
   box-shadow: 2px 2px #8B5E34;
   color: #5A4636;
 }
-.page-1 #LT-header .LT-topbar .LT-Navber p:hover {
+.page-1 #LT-header .LT-topbar .LT-Navber a p:hover {
   background-color: #FFF7E0;
   color: #D3A871;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.2);

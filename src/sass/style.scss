@@ -31,7 +31,7 @@ body {
             }
 
             @media (max-width:640px) {
-                height: 15vh;
+                height: 25vh;
             }
 
 
@@ -74,22 +74,25 @@ body {
                 font-weight: 500;
                 margin-right: 50px;
 
+                a {
+                    text-decoration: none;
+                    p {
+                        margin: 15px;
+                        padding: 5px 10px;
+                        border: 1px solid $border-color; // 邊框色
+                        background-color: $highlight-color; // 背景色
+                        border-radius: 10px;
+                        box-shadow: 2px 2px $shadow-color; // 陰影
+                        color: $text-color; // 文字色
 
-                p {
-                    margin: 15px;
-                    padding: 5px 10px;
-                    border: 1px solid $border-color; // 邊框色
-                    background-color: $highlight-color; // 背景色
-                    border-radius: 10px;
-                    box-shadow: 2px 2px $shadow-color; // 陰影
-                    color: $text-color; // 文字色
-
-                    &:hover {
-                        background-color: $color-secondary-1; // 懸停背景色
-                        color: $color-secondary; // 懸停文字色
-                        box-shadow: 2px 2px rgba(0, 0, 0, 0.2); // 輕微陰影
+                        &:hover {
+                            background-color: $color-secondary-1; // 懸停背景色
+                            color: $color-secondary; // 懸停文字色
+                            box-shadow: 2px 2px rgba(0, 0, 0, 0.2); // 輕微陰影
+                        }
                     }
                 }
+
             }
 
             .LT-announcement {
@@ -487,7 +490,7 @@ body {
 
                         /* 取消省略號效果 */
                         &:nth-child(n+4) {
-                            display:none;
+                            display: none;
                         }
                     }
                 }
@@ -613,6 +616,7 @@ body {
                     @media (max-width:1024px) {
                         flex: 0 0 50%;
                     }
+
                     @media (max-width:640px) {
                         flex: 0 0 100%;
                     }
