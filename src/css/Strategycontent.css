@@ -137,7 +137,7 @@ body {
 .page-1 #LT-header .LT-topbar .LT-Navber a p {
   margin: 15px;
   padding: 5px 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba(74, 59, 36, 0.2);
   background-color: #DAA520;
   border-radius: 10px;
   box-shadow: 2px 2px #8B5E34;
@@ -218,41 +218,60 @@ body {
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 {
   position: relative;
-  /* height: 186px;
-  width: 976px; */
+  z-index: 1;
+  border: 1px solid;
   border-radius: 15px;
-  background-image: url(../images/gamenews-img-1.png);
   background-position: -550px center;
   font-weight: bold;
-  font-family: "Georgia", serif;
-  /*img{
-      position: relative;
-      z-index: -2; */
-  /* height: 100%;
-      object-fit: cover;
-      background-size: cover;
-      object-position: -550px;
-      background-position: 0px; 
-  }*/
+  font-family: "noto sans tc", serif;
+  overflow: hidden;
+  width: 100%;
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 img {
+  position: relative;
+  z-index: -2;
+  height: 186px;
+  object-fit: cover;
+  background-size: cover;
+  background-position: 0px;
+}
+@media (max-width: 640px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 img {
+    height: 100px;
+  }
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
-  /* top: 20px;
-  left: 250px;
-  position: absolute; */
-  /* &::before {
-      content: '遊戲公告';
-      position: absolute;
-      color: black;
-      -webkit-text-stroke: 10px black;
-      z-index:-1;
-  } */
+  position: absolute;
+  top: 0px;
+  left: 500px;
   text-align: center;
   line-height: 180px;
   font-size: 80px;
-  color: #CCAE58;
-  text-shadow: 10px 10px 0 #000, 10px 10px 0 #000, 10px 10px 0 #000, 10px 10px 0 #000, 12px 12px 0 #000, 12px 12px 0 #000, 12px 12px 0 #000;
+  color: #FFD96E;
   /* 字間距 */
   letter-spacing: 30px;
+}
+@media (max-width: 1440px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
+    left: 300px;
+  }
+}
+@media (max-width: 1024px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
+    left: 150px;
+  }
+}
+@media (max-width: 640px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
+    left: 70px;
+  }
+}
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p::before {
+  content: "遊戲攻略";
+  position: absolute;
+  color: black;
+  -webkit-text-stroke: 13px black;
+  z-index: -1;
 }
 @media (max-width: 640px) {
   #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
@@ -263,7 +282,7 @@ body {
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg {
   max-width: 1200px;
-  margin: 30px;
+  margin: 30px 0;
   padding: 20px;
   background-color: #FDF5E6;
   border-radius: 12px;
@@ -278,7 +297,7 @@ body {
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-header {
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 2px solid rgba(74, 59, 36, 0.2);
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-header .guide-title {
   font-size: 24px;
@@ -336,7 +355,7 @@ body {
   margin: 20px 0;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #content-text #product-info h2 {
-  color: #8B4513;
+  color: #D4AF37;
   margin-bottom: 15px;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #content-text #product-info .info-list {
@@ -352,7 +371,7 @@ body {
   content: "■";
   position: absolute;
   left: 0;
-  color: #8B4513;
+  color: #D4AF37;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #content-text #product-info .note {
   color: #c00;
@@ -366,7 +385,7 @@ body {
   margin: 20px 0;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #reward-info h3 {
-  color: #8B4513;
+  color: #D4AF37;
   margin: 15px 0;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #reward-info .content-list {
@@ -386,7 +405,7 @@ body {
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main .related-guides {
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 2px solid #e0e0e0;
+  border-top: 2px solid rgba(74, 59, 36, 0.2);
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main .related-guides h3 {
   color: #333;
@@ -408,7 +427,7 @@ body {
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main .related-guides .guide-links li a::before {
   content: "✓";
   margin-right: 8px;
-  color: #8B4513;
+  color: #D4AF37;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main .related-guides .guide-links li a:hover {
   color: #004d99;
@@ -450,8 +469,8 @@ body {
   transition: all 0.3s ease;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .guide-nav .sticky .nav-list li .nav-link:hover {
-  background: rgba(139, 69, 19, 0.1);
-  color: #8B4513;
+  background: rgba(212, 175, 55, 0.1);
+  color: #D4AF37;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .floating-nav {
   display: none;
@@ -610,7 +629,7 @@ body {
 }
 @media (max-width: 640px) {
   #gamenews-page-all #gamenews-page-2 .gamenews-page-right {
-    margin: 3px;
+    margin: 15px 0px;
     width: 90vw;
   }
 }

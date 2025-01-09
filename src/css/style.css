@@ -139,7 +139,7 @@ body {
 .page-1 #LT-header .LT-topbar .LT-Navber a p {
   margin: 15px;
   padding: 5px 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba(74, 59, 36, 0.2);
   background-color: #DAA520;
   border-radius: 10px;
   box-shadow: 2px 2px #8B5E34;
@@ -332,7 +332,7 @@ body {
   align-items: center;
   background-color: #FFF7E0;
   border-radius: 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid rgba(74, 59, 36, 0.2);
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;

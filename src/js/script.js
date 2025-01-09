@@ -80,6 +80,7 @@ $(function () {
 
     // 初始化
     checkTabletOrBelow();
+    
     $('.LT-gamenews-bk-sm-1').smoove({
         offset: '20%' /* offset 整數預設為像素不能加引號 ％要加引號 */
     });
@@ -88,14 +89,10 @@ $(function () {
 
     $(window).on('resize', function () {
         clearTimeout(resizeTimeout); // 清除之前的計時器
-
+    
         resizeTimeout = setTimeout(function () {
-            const windowWidth = $(window).width(); // 獲取當前視窗寬度
-
-            if (windowWidth >= 768) { // 只有在平板以上執行
-                location.reload(); // 延遲執行，避免頻繁重載
-            }
-        }); // 延遲 300 毫秒
+            location.reload(); // 延遲執行，避免頻繁重載
+        }, 300); // 延遲 300 毫秒
     });
 
 

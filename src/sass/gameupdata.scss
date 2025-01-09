@@ -16,7 +16,7 @@ body {
 .page-1 {
     #LT-header {
         .LT-topbar {
-            display: flex; 
+            display: flex;
             justify-content: start;
             align-items: center;
             flex-wrap: wrap;
@@ -164,6 +164,11 @@ body {
 #gamenews-page-all {
     margin: 0 50px;
 
+    @media (max-width:640px) {
+        margin: 0 20px;
+        width: 90vw;
+    }
+
     #gamenews-page-2 {
         display: flex;
         justify-content: space-around;
@@ -173,6 +178,7 @@ body {
         }
 
         .gamenews-page-left {
+            width: 100%;
             margin-right: 50px;
 
             @media (max-width:640px) {
@@ -180,55 +186,61 @@ body {
             }
 
             .gamenews-left-top-1 {
-
                 position: relative;
-                /* height: 186px;
-                width: 976px; */
-                border-radius: 15px; 
-                background-image: url(../images/gamenews-img-1.png);
+                z-index: 1;
+                border: 1px solid;
+                border-radius: 15px;
                 background-position: -550px center;
                 font-weight: bold;
-                font-family: 'Georgia', serif;
-                /*img{
+                font-family: 'noto sans tc', serif;
+                overflow: hidden;
+                width: 100%;
+
+
+                img {
                     position: relative;
-                    z-index: -2; */
-                /* height: 100%;
+                    z-index: -2;
+                    height: 186px;
                     object-fit: cover;
                     background-size: cover;
-                    object-position: -550px;
-                    background-position: 0px; 
-                }*/
+
+                    background-position: 0px;
+
+                    @media (max-width:640px) {
+                        height: 100px;
+                    }
+                }
 
                 p {
-                    /* top: 20px;
-                    left: 250px;
-                    position: absolute; */
-                    /* &::before {
-                        content: '遊戲公告';
-                        position: absolute;
-                        color: black;
-                        -webkit-text-stroke: 10px black;
-                        z-index:-1;
-                    } */
+                    position: absolute;
+                    top: 0px;
+                    left: 500px;
                     text-align: center;
                     line-height: 180px;
                     font-size: 80px;
-
-                    color: #CCAE58;
-                    text-shadow:
-                        /* 外層黑色描邊 */
-                        10px 10px 0 #000,
-                        10px 10px 0 #000,
-                        10px 10px 0 #000,
-                        10px 10px 0 #000,
-
-                        /* 更外層的黑色陰影，製造深度感 */
-                        12px 12px 0 #000,
-                        12px 12px 0 #000,
-                        12px 12px 0 #000;
-
+                    color: #FFD96E;
                     /* 字間距 */
                     letter-spacing: 30px;
+
+                    @media (max-width:1440px) {
+                        left: 300px;
+                    }
+
+                    @media (max-width:1024px) {
+                        left: 150px;
+                    }
+
+                    @media (max-width:640px) {
+                        left: 70px;
+                    }
+
+                    &::before {
+                        content: '更新資訊';
+                        position: absolute;
+                        color: black;
+                        -webkit-text-stroke: 13px black;
+                        z-index: -1;
+                    }
 
                     @media (max-width:640px) {
                         letter-spacing: 5px;
@@ -327,24 +339,28 @@ body {
                 margin: 0 30px;
                 display: flex;
                 flex-wrap: wrap;
+
                 @media (max-width:1024px) {
-                  justify-content: center;
-                  margin: 0px;
+                    justify-content: center;
+                    margin: 0px;
                 }
 
                 @media (max-width:640px) {
                     margin: 0px;
                 }
+
                 .news-card {
                     margin: 30px;
+
                     @media (max-width:1024px) {
                         width: 100%;
                         margin-top: 15px;
-    
+
                         &:nth-child(n+5) {
                             display: none;
                         }
                     }
+
                     &.modern {
                         width: 350px;
                         background: white;
@@ -352,22 +368,26 @@ body {
                         overflow: hidden;
                         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
                         transition: transform 0.3s ease;
-                
+                        @media (max-width:1024px) {
+                            width: 250px;
+                        }
                         &:hover {
                             transform: translateY(-5px);
                         }
-                
+
+                        
+
                         .card-image {
                             position: relative;
                             height: 200px;
                             overflow: hidden;
-                
+
                             img {
                                 width: 100%;
                                 height: 100%;
                                 object-fit: cover;
                             }
-                
+
                             .image-overlay {
                                 position: absolute;
                                 bottom: 0;
@@ -376,57 +396,57 @@ body {
                                 padding: 20px;
                                 background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
                                 color: white;
-                
+
                                 h2 {
                                     margin: 0 0 5px 0;
                                     font-size: 24px;
                                 }
-                
+
                                 span {
                                     font-size: 14px;
                                 }
                             }
                         }
-                
+
                         .card-content {
                             padding: 20px;
-                
+
                             a {
                                 display: block;
                                 color: #333;
                                 text-decoration: none;
                                 margin-bottom: 10px;
                                 transition: color 0.3s;
-                
+
                                 &:hover {
                                     color: #0066cc;
                                 }
                             }
                         }
-                
+
                         .card-footer {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
                             padding: 10px;
-                
+
                             .author {
                                 display: flex;
                                 align-items: center;
                                 gap: 10px;
-                
+
                                 img {
                                     width: 30px;
                                     height: 30px;
                                     border-radius: 50%;
                                     object-fit: cover;
                                 }
-                
+
                                 span {
                                     color: #333;
                                 }
                             }
-                
+
                             time {
                                 color: #666;
                                 font-size: 14px;
@@ -449,7 +469,8 @@ body {
             }
 
             @media (max-width:640px) {
-                margin: 10px;
+                margin: 15px 0px;
+                width: 90vw;
             }
 
             /* 優雅卡片風格 */
@@ -479,7 +500,8 @@ body {
                     text-overflow: ellipsis;
                     overflow: hidden;
                     cursor: pointer;
-                    a{
+
+                    a {
                         color: #000;
                     }
 
@@ -664,5 +686,3 @@ body {
         }
     }
 }
-
-
