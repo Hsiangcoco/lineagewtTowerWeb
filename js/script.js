@@ -80,7 +80,7 @@ $(function () {
 
     // 初始化
     checkTabletOrBelow();
-    
+
     $('.LT-gamenews-bk-sm-1').smoove({
         offset: '20%' /* offset 整數預設為像素不能加引號 ％要加引號 */
     });
@@ -89,12 +89,20 @@ $(function () {
 
     $(window).on('resize', function () {
         clearTimeout(resizeTimeout); // 清除之前的計時器
-    
+
         resizeTimeout = setTimeout(function () {
-            location.reload(); // 延遲執行，避免頻繁重載
+            if ($(window).width() > 1024) { // 僅當視窗寬度大於 1024px 時執行
+                location.reload(); // 延遲執行，避免頻繁重載
+            }
         }, 300); // 延遲 300 毫秒
     });
 
+    if (!sessionStorage.getItem("hasRefreshed")) {
+        // 設定標記，表示已經刷新過
+        sessionStorage.setItem("hasRefreshed", "true");
+        // 重新整理頁面
+        location.reload();
+    }
 
     function loadMore() {
         // 原始資料模板
@@ -124,15 +132,15 @@ $(function () {
             moreContent.insertAdjacentHTML('beforeend', template);
         }
     }
-    
+
 
     $(".load-more-btn").click(function () {
         loadMore()
     });
-$(".floating-nav").click(function(){
-    $(this).toggleClass('active')
-})
-    
+    $(".floating-nav").click(function () {
+        $(this).toggleClass('active')
+    })
+
 })
 
 
