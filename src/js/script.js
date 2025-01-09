@@ -132,6 +132,10 @@ $(function () {
     $(".load-more-btn").click(function () {
         loadMore()
     });
+$(".floating-nav").click(function(){
+    $(this).toggleClass('active')
+})
+    
 })
 
 

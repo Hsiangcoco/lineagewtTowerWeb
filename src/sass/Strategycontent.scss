@@ -165,7 +165,8 @@ body {
     margin: 0 50px;
 
     @media (max-width:640px) {
-        margin: 0 10px;
+        margin: 0 20px;
+        width: 90vw;
     }
 
     #gamenews-page-2 {
@@ -251,6 +252,11 @@ body {
                 border-radius: 12px;
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
+                @media (max-width:640px) {
+                    width: 90vw;
+                    margin: 20px 3px ;
+                }
+
                 // 文章標題區
                 .guide-header {
                     margin-bottom: 30px;
@@ -274,15 +280,30 @@ body {
                 .guide-content {
                     display: flex;
                     gap: 30px;
-                    overflow: auto;
+
+                    @media (max-width:1024px) {
+                        display: block;
+                    }
+
 
                     .content-main {
                         flex: 1;
                         overflow: auto;
-                        .guide-image{
-                            .youtubevideo{
+
+                        .guide-image {
+                            .youtubevideo {
                                 width: 100%;
                                 height: 560px;
+
+                                @media (max-width:1024px) {
+                                    width: 100%;
+                                    height: 360px;
+                                }
+
+                                @media (max-width:640px) {
+                                    width: 100%;
+                                    height: 200px;
+                                }
                             }
                         }
 
@@ -413,32 +434,219 @@ body {
                     .guide-nav {
                         width: 200px;
                         flex-shrink: 0;
+                        position: sticky;
+                        top: 20px;
 
-                        .nav-list {
-                            list-style: none;
-                            padding: 0;
+                        @media (max-width:1024px) {
+                            display: none;
+                        }
+
+                        .sticky {
                             position: sticky;
                             top: 20px;
 
-                            li {
+                            .nav-header {
                                 margin-bottom: 10px;
+                                padding-bottom: 8px;
+                                border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+                                text-align: center;
+                            }
 
-                                .nav-link {
-                                    display: block;
-                                    padding: 10px;
-                                    color: $primary-color;
-                                    text-decoration: none;
-                                    border-radius: 4px;
-                                    transition: all 0.3s ease;
+                            .nav-list {
+                                list-style: none;
+                                padding: 0;
 
-                                    &:hover {
-                                        background: rgba($accent-color, 0.1);
-                                        color: $accent-color;
+
+                                li {
+                                    margin-bottom: 10px;
+
+                                    .nav-link {
+                                        display: block;
+                                        padding: 10px;
+                                        color: $primary-color;
+                                        text-decoration: none;
+                                        border-radius: 4px;
+                                        transition: all 0.3s ease;
+
+                                        &:hover {
+                                            background: rgba($accent-color, 0.1);
+                                            color: $accent-color;
+                                        }
                                     }
                                 }
                             }
                         }
+
                     }
+
+                    .floating-nav {
+                        display: none;
+                        position: fixed;
+                        right: 20px;
+                        bottom: 20px;
+                        z-index: 1000;
+
+                        @media (max-width:1024px) {
+                            display: block;
+                        }
+
+                        @media (max-width:1024px) {
+                            right: 3px;
+                        }
+
+                        // 展開按鈕
+                        .nav-toggle {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            background: #f0Daae;
+                            border: 2px solid #8B4513;
+                            cursor: pointer;
+                            position: relative;
+                            transition: all 0.3s ease;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:hover {
+                                background: #8B4513;
+
+                                .toggle-icon,
+                                .toggle-icon::before,
+                                .toggle-icon::after {
+                                    background: #f0Daae;
+                                }
+
+                                .toggle-text {
+                                    opacity: 1;
+                                }
+                            }
+
+                            .toggle-icon {
+                                width: 20px;
+                                height: 2px;
+                                background: #8B4513;
+                                position: relative;
+                                transition: all 0.3s ease;
+
+                                &::before,
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 20px;
+                                    height: 2px;
+                                    background: #8B4513;
+                                    transition: all 0.3s ease;
+                                }
+
+                                &::before {
+                                    top: -6px;
+                                }
+
+                                &::after {
+                                    bottom: -6px;
+                                }
+                            }
+
+                            .toggle-text {
+                                position: absolute;
+                                right: 60px;
+                                background: rgba(139, 69, 19, 0.9);
+                                color: #f0Daae;
+                                padding: 8px 12px;
+                                border-radius: 4px;
+                                font-size: 14px;
+                                opacity: 1;
+                                transition: all 0.3s ease;
+                                pointer-events: none;
+                                white-space: nowrap;
+                            }
+                        }
+
+                        // 導航內容
+                        .nav-content {
+                            position: absolute;
+                            bottom: 60px;
+                            right: 0;
+                            width: 200px;
+                            background: #f0Daae;
+                            border-radius: 8px;
+                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                            padding: 15px;
+                            transform: scale(0);
+                            transform-origin: bottom right;
+                            transition: all 0.3s ease;
+                            opacity: 0;
+                            border: 2px solid #8B4513;
+
+                            .nav-header {
+                                color: #8B4513;
+                                font-size: 14px;
+                                margin-bottom: 10px;
+                                padding-bottom: 8px;
+                                border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+                                text-align: center;
+                            }
+
+                            .nav-list {
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+
+                                li {
+                                    margin-bottom: 8px;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+
+                                .nav-link {
+                                    display: block;
+                                    padding: 8px 12px;
+                                    color: #8B4513;
+                                    text-decoration: none;
+                                    border-radius: 4px;
+                                    transition: all 0.2s ease;
+
+                                    &:hover {
+                                        background: rgba(139, 69, 19, 0.1);
+                                        padding-left: 16px;
+                                    }
+                                }
+                            }
+                        }
+
+                        // 展開狀態
+                        &.active {
+                            .nav-toggle {
+                                background: #8B4513;
+
+                                .toggle-icon {
+                                    background: transparent;
+
+                                    &::before {
+                                        top: 0;
+                                        transform: rotate(45deg);
+                                        background: #f0Daae;
+                                    }
+
+                                    &::after {
+                                        bottom: 0;
+                                        transform: rotate(-45deg);
+                                        background: #f0Daae;
+                                    }
+                                }
+                            }
+
+                            .nav-content {
+                                display: block;
+                                transform: scale(1);
+                                opacity: 1;
+                            }
+                        }
+                    }
+
                 }
             }
         }
@@ -455,7 +663,7 @@ body {
             }
 
             @media (max-width:640px) {
-                margin: 10px;
+                margin: 3px;
                 width: 90vw;
             }
 
