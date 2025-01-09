@@ -1,0 +1,668 @@
+@use 'reset';
+@use './variables/'as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic:wght@700&display=swap');
+
+
+body {
+    font-family: "Noto Sans", "Microsoft JhengHei", "Microsoft YaHei", "Apple LiGothic", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+    background-image: url(../images/backimg-2.png);
+    background-color: #f0Daae;
+    background-size: cover;
+
+}
+
+
+
+.page-1 {
+    #LT-header {
+        .LT-topbar {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+            /* 允許換行 */
+
+            height: 8vh; // 設置高度
+
+            @media (max-width:1024px) {
+                height: 100%;
+            }
+
+            @media (max-width:640px) {
+                height: 100%;
+            }
+
+
+
+            .LT-title {
+                display: flex;
+                position: relative;
+                align-items: center;
+                font-size: 24px; // LOGO 字體大小
+                margin: 0 30px 0 60px; // 與左側距離
+                color: #5A4636; // 深棕色字體，與背景形成良好對比
+                font-weight: 900; // 加粗字體，突顯 LOGO
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); // 添加立體感的陰影
+                font-family: 'Georgia', serif; // 使用具有品牌感的字體（可替換）
+                letter-spacing: 1px; // 增加字母間距，提升辨識度
+                text-transform: uppercase; // 全部大寫，增加品牌感
+
+                .logoimg {
+                    height: 90px;
+                    width: 100px;
+                    margin: 0 -20px;
+
+                    @media (max-width:1024px) {
+                        height: 45px;
+                    }
+
+                    @media (max-width:640px) {
+                        height: 45px;
+                        width: 100px;
+                    }
+
+                }
+
+                @media (max-width:1024px) {
+                    margin: 0 15px 0 15px;
+                    flex: 1 1 100%;
+                }
+
+                // 背景裝飾
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -10px;
+                    transform: translateY(-50%);
+                    width: 10px;
+                    height: 40px;
+                    background-color: #DAA520; // 金黃色裝飾色
+                    border-radius: 5px;
+                    margin-right: 10px;
+                }
+            }
+
+            .LT-Navber {
+                color: $text-color; // 主文字色
+                display: flex;
+                justify-content: flex-start;
+                font-weight: 500;
+                margin-right: 50px;
+
+                a {
+                    text-decoration: none;
+
+                    p {
+                        margin: 15px;
+                        padding: 5px 10px;
+                        border: 1px solid $border-color; // 邊框色
+                        background-color: $highlight-color; // 背景色
+                        border-radius: 10px;
+                        box-shadow: 2px 2px $shadow-color; // 陰影
+                        color: $text-color; // 文字色
+
+                        &:hover {
+                            background-color: $color-secondary-1; // 懸停背景色
+                            color: $color-secondary; // 懸停文字色
+                            box-shadow: 2px 2px rgba(0, 0, 0, 0.2); // 輕微陰影
+                        }
+                    }
+                }
+
+            }
+
+            .LT-announcement {
+                display: flex;
+                margin-right: 50px;
+                padding: 5px 0;
+                background-color: $color-secondary-1; // 背景色
+                width: 30%;
+                border: 2px solid $color-secondary; // 邊框色
+                border-radius: 5px;
+
+                @media (max-width:1024px) {
+                    width: 0%;
+                    flex: 1 1 100%;
+                    margin-bottom: 10px;
+                }
+
+                @media (max-width:640px) {
+                    margin: 0px;
+                }
+
+                .LT-announcement-1 {
+                    display: flex;
+                    margin: 0 15px;
+
+                    @media (max-width:640px) {
+                        margin: 0 10px;
+                    }
+
+                    p {
+                        font-size: $font-size-xs; // 小字體大小
+                        color: $error-color; // 錯誤文字顏色
+                        font-weight: bold;
+
+                    }
+                }
+
+                .LT-announcement-scroll {
+
+                    li {
+
+                        text-align: left;
+                        font-size: $font-size-xs; // 小字體大小
+                        color: $text-color; // 文字顏色
+                    }
+                }
+            }
+        }
+    }
+}
+
+#gamenews-page-all {
+    margin: 0 50px;
+
+    @media (max-width:640px) {
+        margin: 0 20px;
+        width: 90vw;
+    }
+
+    #gamenews-page-2 {
+        display: flex;
+        justify-content: space-around;
+
+        @media (max-width:1024px) {
+            display: block;
+        }
+
+        .gamenews-page-left {
+            width: 100%;
+            margin-right: 50px;
+
+            @media (max-width:640px) {
+                margin: 20px 0 0 0px;
+
+            }
+
+            .gamenews-left-top-1 {
+                position: relative;
+                z-index: 1;
+                border: 1px solid;
+                border-radius: 15px;
+                background-position: -550px center;
+                font-weight: bold;
+                font-family: 'noto sans tc', serif;
+                overflow: hidden;
+                width: 100%;
+
+
+                img {
+                    position: relative;
+                    z-index: -2;
+                    height: 186px;
+                    object-fit: cover;
+                    background-size: cover;
+
+                    background-position: 0px;
+                    @media (max-width:640px) {
+                        height: 100px;
+                    }
+                }
+
+                p {
+                    position: absolute;
+                    top: 0px;
+                    left: 500px;
+                    text-align: center;
+                    line-height: 180px;
+                    font-size: 80px;
+                    color: #FFD96E;
+                    /* 字間距 */
+                    letter-spacing: 30px;
+
+                    @media (max-width:1440px) {
+                        left: 300px;
+                    }
+                    @media (max-width:1024px) {
+                        left: 150px;
+                    }
+                    @media (max-width:640px) {
+                        left: 70px;
+                    }
+
+                    &::before {
+                        content: '關於網站';
+                        position: absolute;
+                        color: black;
+                        -webkit-text-stroke: 13px black;
+                        z-index: -1;
+                    }
+
+                    @media (max-width:640px) {
+                        letter-spacing: 5px;
+                        font-size: 50px;
+                        line-height: 100px;
+                    }
+                }
+            }
+
+            .gamenews-content-bg {
+                margin: 30px 0px;
+                padding: 20px;
+                background-color: $bg-color;
+                border-radius: 12px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+                @media (max-width:640px) {
+                    width: 90vw;
+                    margin: 20px 3px;
+                }
+
+                .streamer-profile {
+                    max-width: 900px;
+                    margin: 40px auto;
+                    background: white;
+                    border-radius: 20px;
+                    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+                    overflow: hidden;
+
+                    // 頭部區域
+                    .profile-header {
+                        background: linear-gradient(45deg, darken($bg-primary, 5%), $bg-primary);
+                        padding: 30px;
+
+                        .profile-info {
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+
+                            .profile-avatar {
+                                width: 120px;
+                                height: 120px;
+                                border-radius: 50%;
+                                border: 4px solid white;
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                            }
+
+                            .profile-details {
+                                flex: 1;
+
+                                .profile-name {
+                                    font-size: 24px;
+                                    color: $text-primary;
+                                    margin-bottom: 5px;
+                                }
+
+                                .profile-stats {
+                                    color: $text-secondary;
+                                    font-size: 14px;
+                                    margin-bottom: 5px;
+                                }
+
+                                .profile-bio {
+                                    color: $text-primary;
+                                    margin-bottom: 5px;
+                                }
+
+                                .profile-link {
+                                    color: $accent-color;
+                                    text-decoration: none;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+
+                            .follow-button {
+                                background: $accent-color;
+                                color: white;
+                                border: none;
+                                padding: 10px 25px;
+                                border-radius: 25px;
+                                cursor: pointer;
+                                transition: all 0.3s ease;
+
+                                &:hover {
+                                    background: darken($accent-color, 10%);
+                                    transform: translateY(-2px);
+                                }
+                            }
+                        }
+                    }
+
+                    // 主要內容區
+                    .profile-content {
+                        padding: 30px;
+
+                        .about-section {
+                            line-height: 1.6;
+                            color: $text-primary;
+
+                            p {
+                                margin-bottom: 20px;
+                            }
+
+                            .channel-highlights {
+                                margin: 30px 0;
+
+                                h2 {
+                                    color: $text-primary;
+                                    font-size: 20px;
+                                    margin-bottom: 15px;
+                                }
+
+                                .highlights-list {
+                                    list-style: none;
+                                    padding: 0;
+
+                                    li {
+                                        padding: 10px 0;
+                                        padding-left: 25px;
+                                        position: relative;
+
+                                        &::before {
+                                            content: '🎮';
+                                            position: absolute;
+                                            left: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .contact-info {
+                                margin: 30px 0;
+                                padding: 15px;
+                                background: lighten($bg-primary, 5%);
+                                border-radius: 10px;
+                            }
+                        }
+
+                        // 社群連結
+                        .social-links {
+                            margin-top: 30px;
+                            text-align: center;
+
+                            .social-text {
+                                color: $text-secondary;
+                                margin-bottom: 15px;
+                            }
+
+                            .social-icons {
+                                display: flex;
+                                justify-content: center;
+                                gap: 15px;
+
+                                .social-icon {
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    transition: transform 0.3s ease;
+
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+
+                                    &:hover {
+                                        transform: translateY(-3px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        margin: 20px;
+
+                        .profile-header {
+                            .profile-info {
+                                flex-direction: column;
+                                text-align: center;
+
+                                .profile-avatar {
+                                    width: 100px;
+                                    height: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .gamenews-page-right {
+            width: 20vw;
+
+            @media (max-width:1024px) {
+                width: 70vw;
+                margin: 50px 0 0;
+                display: flex;
+                flex-direction: column;
+                margin-left: 50px;
+            }
+
+            @media (max-width:640px) {
+                margin: 3px;
+                width: 90vw;
+            }
+
+            /* 優雅卡片風格 */
+            .gamenews-top-1 {
+                background: #f0Daae;
+                padding: 24px;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(240, 218, 174, 0.4);
+                margin-bottom: 40px;
+
+                .header {
+                    color: #7c6a47;
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid rgba(124, 106, 71, 0.2);
+                }
+
+                .item {
+                    background: rgba(255, 255, 255, 0.6);
+                    margin: 12px 0;
+                    padding: 16px;
+                    border-radius: 8px;
+                    transition: all 0.3s;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    a {
+                        color: #000;
+                    }
+
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.8);
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+/* 深色主題風格 */
+/* .dark-theme {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+  }
+
+  .dark-theme .header {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #333;
+  }
+
+  .dark-theme .item {
+    background: #2d2d2d;
+    margin: 12px 0;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 3px solid #4a90e2;
+    transition: all 0.2s;
+  }
+
+  .dark-theme .item:hover {
+    background: #333;
+    transform: translateX(5px);
+  }
+ */
+
+.gamenews-ad-placement {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background-color: #f0Daae;
+
+    .ad-header {
+        padding: 0.5rem;
+        background-color: rgba(120, 53, 15, 0.1);
+        border-bottom: 1px solid rgba(120, 53, 15, 0.2);
+
+        .ad-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .ad-title {
+                color: rgb(120, 53, 15);
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+
+            .ad-label {
+                color: rgba(120, 53, 15, 0.6);
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+
+    .ad-content {
+        padding: 1rem;
+
+        .ad-placeholder {
+            background-color: rgba(120, 53, 15, 0.05);
+            border-radius: 0.375rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+            border: 1px dashed rgba(120, 53, 15, 0.2);
+
+            .ad-placeholder-text {
+                color: rgba(120, 53, 15, 0.4);
+                font-size: 0.875rem;
+            }
+
+            .ad-size {
+                color: rgba(120, 53, 15, 0.4);
+                font-size: 0.75rem;
+                margin-top: 0.25rem;
+            }
+        }
+    }
+
+    .ad-footer {
+        padding: 0.5rem 0.75rem;
+        background-color: rgba(120, 53, 15, 0.05);
+        color: rgba(120, 53, 15, 0.6);
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.load-more-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    background-color: rgba(120, 53, 15, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #78350f;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.load-more-btn:hover {
+    background-color: rgba(120, 53, 15, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+.LT-footer {
+    display: flex;
+    margin: 20px 50px;
+    background-image: url(../images/logoimgbk-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    .LT-footer-bg-1 {
+        padding: 0 30px 0 0;
+        text-align: center;
+
+        .LT-footer-titletop {
+            p {
+                color: #8B4513;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+
+            .LT-footer-content {
+                font-size: 0.8rem;
+
+                a {
+                    color: #000000;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

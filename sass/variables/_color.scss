@@ -22,3 +22,33 @@ $text-secondary: #8B7355;      // 次要文字顏色
 $accent-color: #DAA520;        // 強調色
 $warning-bg: #FFF8DC;          // 警告背景色
 $warning-text: #8B7355;        // 警告文字顏色
+
+
+$primary-color: #333;
+$secondary-color: #666;
+$border-color: #e0e0e0;
+$bg-color: #FDF5E6;
+$link-color: #0066cc;
+$accent-color: #8B4513;
+
+//攻略卡片樣式
+$background-base: #FDF5E6;
+$primary-light: #f2c4b0;     // 更淡的主色調
+$secondary-light: #f4d4c7;   // 更淡的次要色調
+$overlay-brown: rgba(143, 108, 96, 0.3);  // 更淡的覆蓋層
+$gold-accent: #e8c98d;       // 更柔和的金色
+$text-light: #f4e9e2;        // 淺色文字
+$text-dark: #8b7355;         // 深色文字，用於標題
+
+//關於我們樣式
+$bg-primary: #f0Daae;
+$text-primary: #4A3B24;
+$text-secondary: #8B7355;
+$accent-color: #D4AF37;
+$border-color: rgba(74, 59, 36, 0.2);
+
+//title樣式
+$title-gold: #FFD700;
+$title-gold-light: #FFF3A0;
+$title-shadow: #000;
+$stroke-width: 6px;

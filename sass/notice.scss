@@ -163,9 +163,12 @@ body {
 
 #gamenews-page-all {
     margin: 0 50px;
+
     @media (max-width:640px) {
-        margin: 0 10px;
-                        }
+        margin: 20px;
+        width: 90vw;
+    }
+
     #gamenews-page-2 {
         display: flex;
         justify-content: space-around;
@@ -185,51 +188,60 @@ body {
 
             .gamenews-left-top-1 {
                 position: relative;
-                /* height: 186px;
-                width: 976px; */
+                z-index: 1;
+                border: 1px solid;
                 border-radius: 15px;
-                background-image: url(../images/gamenews-img-1.png);
                 background-position: -550px center;
-                /*img{
+                font-weight: bold;
+                font-family: 'noto sans tc', serif;
+                overflow: hidden;
+                width: 100%;
+
+
+                img {
                     position: relative;
-                    z-index: -2; */
-                /* height: 100%;
+                    z-index: -2;
+                    height: 186px;
                     object-fit: cover;
                     background-size: cover;
-                    object-position: -550px;
-                    background-position: 0px; 
-                }*/
+
+                    background-position: 0px;
+
+                    @media (max-width:640px) {
+                        height: 100px;
+                    }
+                }
 
                 p {
-                    /* top: 20px;
-                    left: 250px;
-                    position: absolute; */
-                    /* &::before {
-                        content: '遊戲公告';
-                        position: absolute;
-                        color: black;
-                        -webkit-text-stroke: 10px black;
-                        z-index:-1;
-                    } */
+                    position: absolute;
+                    top: 0px;
+                    left: 500px;
                     text-align: center;
                     line-height: 180px;
                     font-size: 80px;
-
-                    color: #CCAE58;
-                    text-shadow:
-                        /* 外層黑色描邊 */
-                        10px 10px 0 #000,
-                        10px 10px 0 #000,
-                        10px 10px 0 #000,
-                        10px 10px 0 #000,
-
-                        /* 更外層的黑色陰影，製造深度感 */
-                        12px 12px 0 #000,
-                        12px 12px 0 #000,
-                        12px 12px 0 #000;
-
+                    color: #FFD96E;
                     /* 字間距 */
                     letter-spacing: 30px;
+
+                    @media (max-width:1440px) {
+                        left: 300px;
+                    }
+
+                    @media (max-width:1024px) {
+                        left: 150px;
+                    }
+
+                    @media (max-width:640px) {
+                        left: 70px;
+                    }
+
+                    &::before {
+                        content: '遊戲公告';
+                        position: absolute;
+                        color: black;
+                        -webkit-text-stroke: 13px black;
+                        z-index: -1;
+                    }
 
                     @media (max-width:640px) {
                         letter-spacing: 5px;
@@ -511,6 +523,12 @@ body {
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
+                    cursor: pointer;
+
+                    a {
+                        color: #000;
+                    }
+
 
                     &:hover {
                         background: rgba(255, 255, 255, 0.8);

@@ -1,0 +1,645 @@
+@use 'reset';
+@use './variables/'as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic:wght@700&display=swap');
+
+
+body {
+    font-family: "Noto Sans", "Microsoft JhengHei", "Microsoft YaHei", "Apple LiGothic", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+    background-image: url(../images/backimg-2.png);
+    background-color: #f0Daae;
+    background-size: cover;
+
+}
+
+
+
+.page-1 {
+    #LT-header {
+        .LT-topbar {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+            /* 允許換行 */
+
+            height: 8vh; // 設置高度
+
+            @media (max-width:1024px) {
+                height: 100%;
+            }
+
+            @media (max-width:640px) {
+                height: 100%;
+            }
+
+
+
+            .LT-title {
+                display: flex;
+                position: relative;
+                align-items: center;
+                font-size: 24px; // LOGO 字體大小
+                margin: 0 30px 0 60px; // 與左側距離
+                color: #5A4636; // 深棕色字體，與背景形成良好對比
+                font-weight: 900; // 加粗字體，突顯 LOGO
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); // 添加立體感的陰影
+                font-family: 'Georgia', serif; // 使用具有品牌感的字體（可替換）
+                letter-spacing: 1px; // 增加字母間距，提升辨識度
+                text-transform: uppercase; // 全部大寫，增加品牌感
+
+                .logoimg {
+                    height: 90px;
+                    width: 100px;
+                    margin: 0 -20px;
+
+                    @media (max-width:1024px) {
+                        height: 45px;
+                    }
+
+                    @media (max-width:640px) {
+                        height: 45px;
+                        width: 100px;
+                    }
+
+                }
+
+                @media (max-width:1024px) {
+                    margin: 0 15px 0 15px;
+                    flex: 1 1 100%;
+                }
+
+                // 背景裝飾
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -10px;
+                    transform: translateY(-50%);
+                    width: 10px;
+                    height: 40px;
+                    background-color: #DAA520; // 金黃色裝飾色
+                    border-radius: 5px;
+                    margin-right: 10px;
+                }
+            }
+
+            .LT-Navber {
+                color: $text-color; // 主文字色
+                display: flex;
+                justify-content: flex-start;
+                font-weight: 500;
+                margin-right: 50px;
+
+                a {
+                    text-decoration: none;
+
+                    p {
+                        margin: 15px;
+                        padding: 5px 10px;
+                        border: 1px solid $border-color; // 邊框色
+                        background-color: $highlight-color; // 背景色
+                        border-radius: 10px;
+                        box-shadow: 2px 2px $shadow-color; // 陰影
+                        color: $text-color; // 文字色
+
+                        &:hover {
+                            background-color: $color-secondary-1; // 懸停背景色
+                            color: $color-secondary; // 懸停文字色
+                            box-shadow: 2px 2px rgba(0, 0, 0, 0.2); // 輕微陰影
+                        }
+                    }
+                }
+
+            }
+
+            .LT-announcement {
+                display: flex;
+                margin-right: 50px;
+                padding: 5px 0;
+                background-color: $color-secondary-1; // 背景色
+                width: 30%;
+                border: 2px solid $color-secondary; // 邊框色
+                border-radius: 5px;
+
+                @media (max-width:1024px) {
+                    width: 0%;
+                    flex: 1 1 100%;
+                    margin-bottom: 10px;
+                }
+
+                @media (max-width:640px) {
+                    margin: 0px;
+                }
+
+                .LT-announcement-1 {
+                    display: flex;
+                    margin: 0 15px;
+
+                    @media (max-width:640px) {
+                        margin: 0 10px;
+                    }
+
+                    p {
+                        font-size: $font-size-xs; // 小字體大小
+                        color: $error-color; // 錯誤文字顏色
+                        font-weight: bold;
+
+                    }
+                }
+
+                .LT-announcement-scroll {
+
+                    li {
+
+                        text-align: left;
+                        font-size: $font-size-xs; // 小字體大小
+                        color: $text-color; // 文字顏色
+                    }
+                }
+            }
+        }
+    }
+}
+
+#gamenews-page-all {
+    margin: 0 50px;
+
+    @media (max-width:640px) {
+        margin: 0 20px;
+        width: 90vw;
+    }
+    #gamenews-page-2 {
+        display: flex;
+        justify-content: space-around;
+
+        @media (max-width:1024px) {
+            display: block;
+        }
+
+        .gamenews-page-left {
+            width: 100%;
+            margin-right: 50px;
+
+            @media (max-width:640px) {
+                margin: 20px 0 0 0px;
+            }
+
+            .gamenews-left-top-1 {
+                position: relative;
+                z-index: 1;
+                border: 1px solid;
+                border-radius: 15px;
+                background-position: -550px center;
+                font-weight: bold;
+                font-family: 'noto sans tc', serif;
+                overflow: hidden;
+                width: 100%;
+
+
+                img {
+                    position: relative;
+                    z-index: -2;
+                    height: 186px;
+                    object-fit: cover;
+                    background-size: cover;
+
+                    background-position: 0px;
+                    @media (max-width:640px) {
+                        height: 100px;
+                    }
+                }
+
+                p {
+                    position: absolute;
+                    top: 0px;
+                    left: 500px;
+                    text-align: center;
+                    line-height: 180px;
+                    font-size: 80px;
+                    color: #FFD96E;
+                    /* 字間距 */
+                    letter-spacing: 30px;
+
+                    @media (max-width:1440px) {
+                        left: 300px;
+                    }
+                    @media (max-width:1024px) {
+                        left: 150px;
+                    }
+                    @media (max-width:640px) {
+                        left: 70px;
+                    }
+
+                    &::before {
+                        content: '遊戲攻略';
+                        position: absolute;
+                        color: black;
+                        -webkit-text-stroke: 13px black;
+                        z-index: -1;
+                    }
+
+                    @media (max-width:640px) {
+                        letter-spacing: 5px;
+                        font-size: 50px;
+                        line-height: 100px;
+                    }
+                }
+            }
+
+            .gamenews-hotnote {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+                margin: 30px;
+                height: 45vh;
+
+                @media (max-width:640px) {
+                    height: 100%;
+                }
+
+                >div {
+                    border: 2px solid;
+                    width: calc(40%);
+                    height: 40%;
+                    margin-right: 30px;
+                    position: relative;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    box-shadow: 14px 14px 4px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+
+                    @media (max-width:640px) {
+                        width: 100%;
+                        margin-top: 15px;
+
+                        &:nth-child(n+3) {
+                            display: none;
+                        }
+                    }
+
+                    &:hover {
+                        transform: translateY(-5px);
+                    }
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.085), rgba(0, 0, 0, 0.183));
+                    }
+                }
+
+                p {
+                    position: relative;
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: bold;
+                    padding: 12px;
+                    margin: 0;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+                    @media (max-width:640px) {
+                        font-size: 20px;
+                    }
+                }
+
+                .gamenews-hotnote-1 {
+                    background-image: url(../images/gamenews-img-big.png);
+                }
+
+                .gamenews-hotnote-2 {
+                    background-image: url(../images/gamenote-img-4.png);
+                }
+
+                .gamenews-hotnote-3 {
+                    background-image: url(../images/gamenews-img-2.webp);
+                }
+
+                .gamenews-hotnote-4 {
+                    background-image: url(../images/gamenote-img-big.png);
+                }
+            }
+
+            .gamenews-content-bg {
+                background-color: #FDF5E6;
+                border: 1px solid #8B4513;
+                border-radius: 15px;
+                margin: 0 30px;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                @media (max-width:1024px) {
+                    justify-content: center;
+                    margin: 0px;
+                }
+
+                @media (max-width:640px) {
+                    margin: 0px;
+                }
+
+                .memory-card {
+                    margin: 30px;
+                    width: 350px;
+                    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+                    border-radius: 4px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    @media (max-width:1024px) {
+                        width: 250px;
+                        &:nth-child(n+5) {
+                            display: none;
+                        }
+                    }
+                    @media (max-width:1024px) {
+                        width: 250px;
+                        &:nth-child(n+5) {
+                            display: none;
+                        }
+                    }
+
+                    &:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+                        .card-image img {
+                            transform: scale(1.05);
+                        }
+                    }
+
+                    .card-image {
+                        height: 200px;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: transform 0.5s ease;
+                        }
+                    }
+
+                    .card-content {
+                        padding: 1.5rem;
+                        background: rgba(255, 255, 255, 0.9);
+
+                        .card-title {
+                            font-size: 1.5rem;
+                            color: #333;
+                            margin: 0 0 0.5rem;
+                        }
+
+                        .card-subtitle {
+                            color: #666;
+                            margin: 0 0 0.5rem;
+                        }
+
+                        .card-date {
+                            color: #999;
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .gamenews-page-right {
+            width: 20vw;
+
+            @media (max-width:1024px) {
+                width: 70vw;
+                margin: 50px 0 0;
+                display: flex;
+                flex-direction: column;
+                margin-left: 50px;
+            }
+
+            @media (max-width:640px) {
+                margin: 15px 0px;
+                width: 90vw;
+            }
+
+            /* 優雅卡片風格 */
+            .gamenews-top-1 {
+                background: #f0Daae;
+                padding: 24px;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(240, 218, 174, 0.4);
+                margin-bottom: 40px;
+
+                .header {
+                    color: #7c6a47;
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid rgba(124, 106, 71, 0.2);
+                }
+
+                .item {
+                    background: rgba(255, 255, 255, 0.6);
+                    margin: 12px 0;
+                    padding: 16px;
+                    border-radius: 8px;
+                    transition: all 0.3s;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    a {
+                        color: #000;
+                    }
+
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.8);
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+/* 深色主題風格 */
+/* .dark-theme {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+  }
+
+  .dark-theme .header {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #333;
+  }
+
+  .dark-theme .item {
+    background: #2d2d2d;
+    margin: 12px 0;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 3px solid #4a90e2;
+    transition: all 0.2s;
+  }
+
+  .dark-theme .item:hover {
+    background: #333;
+    transform: translateX(5px);
+  }
+ */
+
+.gamenews-ad-placement {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background-color: #f0Daae;
+
+    .ad-header {
+        padding: 0.5rem;
+        background-color: rgba(120, 53, 15, 0.1);
+        border-bottom: 1px solid rgba(120, 53, 15, 0.2);
+
+        .ad-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .ad-title {
+                color: rgb(120, 53, 15);
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+
+            .ad-label {
+                color: rgba(120, 53, 15, 0.6);
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+
+    .ad-content {
+        padding: 1rem;
+
+        .ad-placeholder {
+            background-color: rgba(120, 53, 15, 0.05);
+            border-radius: 0.375rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+            border: 1px dashed rgba(120, 53, 15, 0.2);
+
+            .ad-placeholder-text {
+                color: rgba(120, 53, 15, 0.4);
+                font-size: 0.875rem;
+            }
+
+            .ad-size {
+                color: rgba(120, 53, 15, 0.4);
+                font-size: 0.75rem;
+                margin-top: 0.25rem;
+            }
+        }
+    }
+
+    .ad-footer {
+        padding: 0.5rem 0.75rem;
+        background-color: rgba(120, 53, 15, 0.05);
+        color: rgba(120, 53, 15, 0.6);
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.load-more-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    background-color: rgba(120, 53, 15, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #78350f;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.load-more-btn:hover {
+    background-color: rgba(120, 53, 15, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+.LT-footer {
+    display: flex;
+    margin: 20px 50px;
+    background-image: url(../images/logoimgbk-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    .LT-footer-bg-1 {
+        padding: 0 30px 0 0;
+        text-align: center;
+
+        .LT-footer-titletop {
+            p {
+                color: #8B4513;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+
+            .LT-footer-content {
+                font-size: 0.8rem;
+
+                a {
+                    color: #000000;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}

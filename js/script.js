@@ -80,6 +80,7 @@ $(function () {
 
     // 初始化
     checkTabletOrBelow();
+    
     $('.LT-gamenews-bk-sm-1').smoove({
         offset: '20%' /* offset 整數預設為像素不能加引號 ％要加引號 */
     });
@@ -88,14 +89,10 @@ $(function () {
 
     $(window).on('resize', function () {
         clearTimeout(resizeTimeout); // 清除之前的計時器
-
+    
         resizeTimeout = setTimeout(function () {
-            const windowWidth = $(window).width(); // 獲取當前視窗寬度
-
-            if (windowWidth >= 768) { // 只有在平板以上執行
-                location.reload(); // 延遲執行，避免頻繁重載
-            }
-        }); // 延遲 300 毫秒
+            location.reload(); // 延遲執行，避免頻繁重載
+        }, 300); // 延遲 300 毫秒
     });
 
 
@@ -104,7 +101,7 @@ $(function () {
         const template = `
     <div class="gamenews-content-textbox">
         <div class="gamenews-content-textbox-1">
-            <img src="./images/gamenews-content-img-1.png" alt="">
+            <img src="../images/gamenews-content-img-1.png" alt="">
             <a href="#">
                 <p>[說明] 1/8(三) 「白金通行證(21日)」商品說明(骷髏世界除外)(更新)</p>
             </a>
@@ -132,6 +129,10 @@ $(function () {
     $(".load-more-btn").click(function () {
         loadMore()
     });
+$(".floating-nav").click(function(){
+    $(this).toggleClass('active')
+})
+    
 })
 
 

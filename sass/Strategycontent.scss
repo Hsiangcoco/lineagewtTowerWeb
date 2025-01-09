@@ -1,0 +1,886 @@
+@use 'reset';
+@use './variables/'as *;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic:wght@700&display=swap');
+
+
+body {
+    font-family: "Noto Sans", "Microsoft JhengHei", "Microsoft YaHei", "Apple LiGothic", -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+    background-image: url(../images/backimg-2.png);
+    background-color: #f0Daae;
+    background-size: cover;
+
+}
+
+
+
+.page-1 {
+    #LT-header {
+        .LT-topbar {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+            /* 允許換行 */
+
+            height: 8vh; // 設置高度
+
+            @media (max-width:1024px) {
+                height: 100%;
+            }
+
+            @media (max-width:640px) {
+                height: 100%;
+            }
+
+
+
+            .LT-title {
+                display: flex;
+                position: relative;
+                align-items: center;
+                font-size: 24px; // LOGO 字體大小
+                margin: 0 30px 0 60px; // 與左側距離
+                color: #5A4636; // 深棕色字體，與背景形成良好對比
+                font-weight: 900; // 加粗字體，突顯 LOGO
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); // 添加立體感的陰影
+                font-family: 'Georgia', serif; // 使用具有品牌感的字體（可替換）
+                letter-spacing: 1px; // 增加字母間距，提升辨識度
+                text-transform: uppercase; // 全部大寫，增加品牌感
+
+                .logoimg {
+                    height: 90px;
+                    width: 100px;
+                    margin: 0 -20px;
+
+                    @media (max-width:1024px) {
+                        height: 45px;
+                    }
+
+                    @media (max-width:640px) {
+                        height: 45px;
+                        width: 100px;
+                    }
+
+                }
+
+                @media (max-width:1024px) {
+                    margin: 0 15px 0 15px;
+                    flex: 1 1 100%;
+                }
+
+                // 背景裝飾
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -10px;
+                    transform: translateY(-50%);
+                    width: 10px;
+                    height: 40px;
+                    background-color: #DAA520; // 金黃色裝飾色
+                    border-radius: 5px;
+                    margin-right: 10px;
+                }
+            }
+
+            .LT-Navber {
+                color: $text-color; // 主文字色
+                display: flex;
+                justify-content: flex-start;
+                font-weight: 500;
+                margin-right: 50px;
+
+                a {
+                    text-decoration: none;
+
+                    p {
+                        margin: 15px;
+                        padding: 5px 10px;
+                        border: 1px solid $border-color; // 邊框色
+                        background-color: $highlight-color; // 背景色
+                        border-radius: 10px;
+                        box-shadow: 2px 2px $shadow-color; // 陰影
+                        color: $text-color; // 文字色
+
+                        &:hover {
+                            background-color: $color-secondary-1; // 懸停背景色
+                            color: $color-secondary; // 懸停文字色
+                            box-shadow: 2px 2px rgba(0, 0, 0, 0.2); // 輕微陰影
+                        }
+                    }
+                }
+
+            }
+
+            .LT-announcement {
+                display: flex;
+                margin-right: 50px;
+                padding: 5px 0;
+                background-color: $color-secondary-1; // 背景色
+                width: 30%;
+                border: 2px solid $color-secondary; // 邊框色
+                border-radius: 5px;
+
+                @media (max-width:1024px) {
+                    width: 0%;
+                    flex: 1 1 100%;
+                    margin-bottom: 10px;
+                }
+
+                @media (max-width:640px) {
+                    margin: 0px;
+                }
+
+                .LT-announcement-1 {
+                    display: flex;
+                    margin: 0 15px;
+
+                    @media (max-width:640px) {
+                        margin: 0 10px;
+                    }
+
+                    p {
+                        font-size: $font-size-xs; // 小字體大小
+                        color: $error-color; // 錯誤文字顏色
+                        font-weight: bold;
+
+                    }
+                }
+
+                .LT-announcement-scroll {
+
+                    li {
+
+                        text-align: left;
+                        font-size: $font-size-xs; // 小字體大小
+                        color: $text-color; // 文字顏色
+                    }
+                }
+            }
+        }
+    }
+}
+
+#gamenews-page-all {
+    margin: 0 50px;
+
+    @media (max-width:640px) {
+        margin: 0 20px;
+        width: 90vw;
+    }
+
+    #gamenews-page-2 {
+        display: flex;
+        justify-content: space-around;
+
+        @media (max-width:1024px) {
+            display: block;
+        }
+
+        .gamenews-page-left {
+            width: 100%;
+            margin-right: 50px;
+
+            @media (max-width:640px) {
+                margin: 20px 0 0 0px;
+
+            }
+
+            .gamenews-left-top-1 {
+                position: relative;
+                z-index: 1;
+                border: 1px solid;
+                border-radius: 15px;
+                background-position: -550px center;
+                font-weight: bold;
+                font-family: 'noto sans tc', serif;
+                overflow: hidden;
+                width: 100%;
+
+
+                img {
+                    position: relative;
+                    z-index: -2;
+                    height: 186px;
+                    object-fit: cover;
+                    background-size: cover;
+
+                    background-position: 0px;
+                    @media (max-width:640px) {
+                        height: 100px;
+                    }
+                }
+
+                p {
+                    position: absolute;
+                    top: 0px;
+                    left: 500px;
+                    text-align: center;
+                    line-height: 180px;
+                    font-size: 80px;
+                    color: #FFD96E;
+                    /* 字間距 */
+                    letter-spacing: 30px;
+
+                    @media (max-width:1440px) {
+                        left: 300px;
+                    }
+                    @media (max-width:1024px) {
+                        left: 150px;
+                    }
+                    @media (max-width:640px) {
+                        left: 70px;
+                    }
+
+                    &::before {
+                        content: '遊戲攻略';
+                        position: absolute;
+                        color: black;
+                        -webkit-text-stroke: 13px black;
+                        z-index: -1;
+                    }
+
+                    @media (max-width:640px) {
+                        letter-spacing: 5px;
+                        font-size: 50px;
+                        line-height: 100px;
+                    }
+                }
+            }
+
+            .gamenews-content-bg {
+                max-width: 1200px;
+                margin: 30px 0;
+                padding: 20px;
+                background-color: $bg-color;
+                border-radius: 12px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+                @media (max-width:640px) {
+                    width: 90vw;
+                    margin: 20px 3px ;
+                }
+
+                // 文章標題區
+                .guide-header {
+                    margin-bottom: 30px;
+                    padding-bottom: 15px;
+                    border-bottom: 2px solid $border-color;
+
+                    .guide-title {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: $primary-color;
+                        margin-bottom: 10px;
+                    }
+
+                    .guide-date {
+                        font-size: 14px;
+                        color: $secondary-color;
+                    }
+                }
+
+                // 主要內容區
+                .guide-content {
+                    display: flex;
+                    gap: 30px;
+
+                    @media (max-width:1024px) {
+                        display: block;
+                    }
+
+
+                    .content-main {
+                        flex: 1;
+                        overflow: auto;
+
+                        .guide-image {
+                            .youtubevideo {
+                                width: 100%;
+                                height: 560px;
+
+                                @media (max-width:1024px) {
+                                    width: 100%;
+                                    height: 360px;
+                                }
+
+                                @media (max-width:640px) {
+                                    width: 100%;
+                                    height: 200px;
+                                }
+                            }
+                        }
+
+
+                        #content-text {
+                            .greeting {
+                                font-size: 18px;
+                                font-weight: bold;
+                                color: $primary-color;
+                                margin-bottom: 15px;
+                            }
+
+                            .sub-text {
+                                color: $secondary-color;
+                                margin-bottom: 10px;
+                            }
+
+                            #product-info {
+                                background: white;
+                                padding: 20px;
+                                border-radius: 8px;
+                                margin: 20px 0;
+
+                                h2 {
+                                    color: $accent-color;
+                                    margin-bottom: 15px;
+                                }
+
+                                .info-list {
+                                    list-style: none;
+                                    padding: 0;
+
+                                    li {
+                                        margin-bottom: 10px;
+                                        padding-left: 20px;
+                                        position: relative;
+
+                                        &::before {
+                                            content: "■";
+                                            position: absolute;
+                                            left: 0;
+                                            color: $accent-color;
+                                        }
+                                    }
+                                }
+
+                                .note {
+                                    color: #c00;
+                                    font-size: 14px;
+                                    margin-top: 15px;
+                                }
+                            }
+                        }
+
+                        // 商品資訊區
+
+
+                        // 獎勵說明區
+                        #reward-info {
+                            background: white;
+                            padding: 20px;
+                            border-radius: 8px;
+                            margin: 20px 0;
+
+                            h3 {
+                                color: $accent-color;
+                                margin: 15px 0;
+                            }
+
+                            .content-list {
+                                list-style: none;
+                                padding: 0;
+
+                                li {
+                                    margin-bottom: 10px;
+                                    padding-left: 20px;
+                                    position: relative;
+
+                                    &::before {
+                                        content: "-";
+                                        position: absolute;
+                                        left: 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        // 相關攻略區
+                        .related-guides {
+                            margin-top: 30px;
+                            padding-top: 20px;
+                            border-top: 2px solid $border-color;
+
+                            h3 {
+                                color: $primary-color;
+                                margin-bottom: 15px;
+                            }
+
+                            .guide-links {
+                                list-style: none;
+                                padding: 0;
+
+                                li {
+                                    margin-bottom: 10px;
+
+                                    a {
+                                        color: $link-color;
+                                        text-decoration: none;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &::before {
+                                            content: "✓";
+                                            margin-right: 8px;
+                                            color: $accent-color;
+                                        }
+
+                                        &:hover {
+                                            color: darken($link-color, 10%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 側邊導航
+                    .guide-nav {
+                        width: 200px;
+                        flex-shrink: 0;
+                        position: sticky;
+                        top: 20px;
+
+                        @media (max-width:1024px) {
+                            display: none;
+                        }
+
+                        .sticky {
+                            position: sticky;
+                            top: 20px;
+
+                            .nav-header {
+                                margin-bottom: 10px;
+                                padding-bottom: 8px;
+                                border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+                                text-align: center;
+                            }
+
+                            .nav-list {
+                                list-style: none;
+                                padding: 0;
+
+
+                                li {
+                                    margin-bottom: 10px;
+
+                                    .nav-link {
+                                        display: block;
+                                        padding: 10px;
+                                        color: $primary-color;
+                                        text-decoration: none;
+                                        border-radius: 4px;
+                                        transition: all 0.3s ease;
+
+                                        &:hover {
+                                            background: rgba($accent-color, 0.1);
+                                            color: $accent-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .floating-nav {
+                        display: none;
+                        position: fixed;
+                        right: 20px;
+                        bottom: 20px;
+                        z-index: 1000;
+
+                        @media (max-width:1024px) {
+                            display: block;
+                        }
+
+                        @media (max-width:1024px) {
+                            right: 3px;
+                        }
+
+                        // 展開按鈕
+                        .nav-toggle {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            background: #f0Daae;
+                            border: 2px solid #8B4513;
+                            cursor: pointer;
+                            position: relative;
+                            transition: all 0.3s ease;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &:hover {
+                                background: #8B4513;
+
+                                .toggle-icon,
+                                .toggle-icon::before,
+                                .toggle-icon::after {
+                                    background: #f0Daae;
+                                }
+
+                                .toggle-text {
+                                    opacity: 1;
+                                }
+                            }
+
+                            .toggle-icon {
+                                width: 20px;
+                                height: 2px;
+                                background: #8B4513;
+                                position: relative;
+                                transition: all 0.3s ease;
+
+                                &::before,
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 20px;
+                                    height: 2px;
+                                    background: #8B4513;
+                                    transition: all 0.3s ease;
+                                }
+
+                                &::before {
+                                    top: -6px;
+                                }
+
+                                &::after {
+                                    bottom: -6px;
+                                }
+                            }
+
+                            .toggle-text {
+                                position: absolute;
+                                right: 60px;
+                                background: rgba(139, 69, 19, 0.9);
+                                color: #f0Daae;
+                                padding: 8px 12px;
+                                border-radius: 4px;
+                                font-size: 14px;
+                                opacity: 1;
+                                transition: all 0.3s ease;
+                                pointer-events: none;
+                                white-space: nowrap;
+                            }
+                        }
+
+                        // 導航內容
+                        .nav-content {
+                            position: absolute;
+                            bottom: 60px;
+                            right: 0;
+                            width: 200px;
+                            background: #f0Daae;
+                            border-radius: 8px;
+                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                            padding: 15px;
+                            transform: scale(0);
+                            transform-origin: bottom right;
+                            transition: all 0.3s ease;
+                            opacity: 0;
+                            border: 2px solid #8B4513;
+
+                            .nav-header {
+                                color: #8B4513;
+                                font-size: 14px;
+                                margin-bottom: 10px;
+                                padding-bottom: 8px;
+                                border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+                                text-align: center;
+                            }
+
+                            .nav-list {
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+
+                                li {
+                                    margin-bottom: 8px;
+
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+
+                                .nav-link {
+                                    display: block;
+                                    padding: 8px 12px;
+                                    color: #8B4513;
+                                    text-decoration: none;
+                                    border-radius: 4px;
+                                    transition: all 0.2s ease;
+
+                                    &:hover {
+                                        background: rgba(139, 69, 19, 0.1);
+                                        padding-left: 16px;
+                                    }
+                                }
+                            }
+                        }
+
+                        // 展開狀態
+                        &.active {
+                            .nav-toggle {
+                                background: #8B4513;
+
+                                .toggle-icon {
+                                    background: transparent;
+
+                                    &::before {
+                                        top: 0;
+                                        transform: rotate(45deg);
+                                        background: #f0Daae;
+                                    }
+
+                                    &::after {
+                                        bottom: 0;
+                                        transform: rotate(-45deg);
+                                        background: #f0Daae;
+                                    }
+                                }
+                            }
+
+                            .nav-content {
+                                display: block;
+                                transform: scale(1);
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .gamenews-page-right {
+            width: 20vw;
+
+            @media (max-width:1024px) {
+                width: 70vw;
+                margin: 50px 0 0;
+                display: flex;
+                flex-direction: column;
+                margin-left: 50px;
+            }
+
+            @media (max-width:640px) {
+                margin: 15px 0px;
+                width: 90vw;
+            }
+
+            /* 優雅卡片風格 */
+            .gamenews-top-1 {
+                background: #f0Daae;
+                padding: 24px;
+                border-radius: 16px;
+                box-shadow: 0 8px 24px rgba(240, 218, 174, 0.4);
+                margin-bottom: 40px;
+
+                .header {
+                    color: #7c6a47;
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid rgba(124, 106, 71, 0.2);
+                }
+
+                .item {
+                    background: rgba(255, 255, 255, 0.6);
+                    margin: 12px 0;
+                    padding: 16px;
+                    border-radius: 8px;
+                    transition: all 0.3s;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    a {
+                        color: #000;
+                    }
+
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.8);
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+
+/* 深色主題風格 */
+/* .dark-theme {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+  }
+
+  .dark-theme .header {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #333;
+  }
+
+  .dark-theme .item {
+    background: #2d2d2d;
+    margin: 12px 0;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 3px solid #4a90e2;
+    transition: all 0.2s;
+  }
+
+  .dark-theme .item:hover {
+    background: #333;
+    transform: translateX(5px);
+  }
+ */
+
+.gamenews-ad-placement {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background-color: #f0Daae;
+
+    .ad-header {
+        padding: 0.5rem;
+        background-color: rgba(120, 53, 15, 0.1);
+        border-bottom: 1px solid rgba(120, 53, 15, 0.2);
+
+        .ad-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .ad-title {
+                color: rgb(120, 53, 15);
+                font-size: 0.875rem;
+                font-weight: 500;
+            }
+
+            .ad-label {
+                color: rgba(120, 53, 15, 0.6);
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+
+    .ad-content {
+        padding: 1rem;
+
+        .ad-placeholder {
+            background-color: rgba(120, 53, 15, 0.05);
+            border-radius: 0.375rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+            border: 1px dashed rgba(120, 53, 15, 0.2);
+
+            .ad-placeholder-text {
+                color: rgba(120, 53, 15, 0.4);
+                font-size: 0.875rem;
+            }
+
+            .ad-size {
+                color: rgba(120, 53, 15, 0.4);
+                font-size: 0.75rem;
+                margin-top: 0.25rem;
+            }
+        }
+    }
+
+    .ad-footer {
+        padding: 0.5rem 0.75rem;
+        background-color: rgba(120, 53, 15, 0.05);
+        color: rgba(120, 53, 15, 0.6);
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.load-more-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    background-color: rgba(120, 53, 15, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #78350f;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.load-more-btn:hover {
+    background-color: rgba(120, 53, 15, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+.LT-footer {
+    display: flex;
+    margin: 20px 50px;
+    background-image: url(../images/logoimgbk-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    .LT-footer-bg-1 {
+        padding: 0 30px 0 0;
+        text-align: center;
+
+        .LT-footer-titletop {
+            p {
+                color: #8B4513;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+
+            .LT-footer-content {
+                font-size: 0.8rem;
+
+                a {
+                    color: #000000;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
