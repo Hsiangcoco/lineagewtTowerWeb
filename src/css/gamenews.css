@@ -65,7 +65,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   /* 允許換行 */
-  height: 8vh;
+  height: 100%;
 }
 @media (max-width: 1024px) {
   .page-1 #LT-header .LT-topbar {
@@ -130,9 +130,6 @@ body {
   justify-content: flex-start;
   font-weight: 500;
   margin-right: 50px;
-}
-.page-1 #LT-header .LT-topbar .LT-Navber a {
-  text-decoration: none;
 }
 .page-1 #LT-header .LT-topbar .LT-Navber a p {
   margin: 15px;
