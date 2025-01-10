@@ -599,6 +599,14 @@ body {
   /* 深棕色文字 */
   margin-bottom: 10px;
 }
+.page-2 #LT-MainBk-all .update-info-title:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: gold;
+  margin: 15px auto;
+}
 .page-2 #LT-MainBk-all .update-info-description {
   font-size: 1rem;
   color: #8B5E34;
@@ -723,6 +731,14 @@ body {
   color: #5A4636;
   margin-bottom: 10px;
 }
+.page-3 .LT-guide-videos-section .guide-videos-title:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: gold;
+  margin: 15px auto;
+}
 .page-3 .LT-guide-videos-section .guide-videos-description {
   font-size: 1rem;
   text-align: center;
@@ -762,11 +778,6 @@ body {
 .page-3 .LT-guide-videos-section .LT-youtube-bk-all .youtubearrow svg {
   margin-top: 70px;
   transition: transform 0.3s ease;
-}
-@media (max-width: 1024px) {
-  .page-3 .LT-guide-videos-section .LT-youtube-bk-all .youtubearrow svg {
-    display: none;
-  }
 }
 .page-3 .LT-guide-videos-section .LT-youtube-bk-all .youtubearrow:hover svg {
   transform: scale(1.2);

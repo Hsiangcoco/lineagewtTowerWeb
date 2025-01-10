@@ -604,6 +604,14 @@ body {
             color: #5A4636;
             /* 深棕色文字 */
             margin-bottom: 10px;
+            &:after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 3px;
+                background: gold;
+                margin: 15px auto;
+            }
         }
 
         .update-info-description {
@@ -734,6 +742,7 @@ body {
         border-radius: 15px;
         margin: 50px auto;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        
 
         .guide-videos-title {
             font-size: 2rem;
@@ -741,6 +750,14 @@ body {
             text-align: center;
             color: #5A4636;
             margin-bottom: 10px;
+            &:after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 3px;
+                background: gold;
+                margin: 15px auto;
+            }
         }
 
         .guide-videos-description {
@@ -775,8 +792,6 @@ body {
 
                 @media (max-width:1024px) {
                     display: none;
-
-                    ;
                 }
 
                 cursor: pointer;
@@ -787,9 +802,7 @@ body {
                     margin-top: 70px;
                     transition: transform 0.3s ease;
 
-                    @media (max-width:1024px) {
-                        display: none;
-                    }
+                    @media (max-width:1024px) {}
                 }
 
                 &:hover {
