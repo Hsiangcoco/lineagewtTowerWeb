@@ -65,7 +65,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   /* 允許換行 */
-  height: 8vh;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   .page-1 #LT-header .LT-topbar {

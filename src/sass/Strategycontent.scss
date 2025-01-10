@@ -22,7 +22,7 @@ body {
             flex-wrap: wrap;
             /* 允許換行 */
 
-            height: 8vh; // 設置高度
+            width: 100%;
 
             @media (max-width:1024px) {
                 height: 100%;
