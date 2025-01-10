@@ -1,29 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
-                        <!-- 背景光環效果 -->
-                        <defs>
-                          <linearGradient id="haloGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.3"/>
-                            <stop offset="100%" style="stop-color:#FFA500;stop-opacity:0.1"/>
-                          </linearGradient>
-                        </defs>
-                        
-                        <!-- 聖所象徵 - 神聖建築輪廓 -->
-                        <path d="M200 30 L300 120 L270 120 L270 170 L130 170 L130 120 L100 120 Z" 
-                              fill="#2C3E50" 
-                              stroke="#E67E22" 
-                              stroke-width="3"/>
-                        
-                        <!-- 書卷/攻略象徵 -->
-                        <path d="M160 90 Q200 70 240 90 L240 140 Q200 120 160 140 Z" 
-                              fill="#E67E22" 
-                              stroke="#2C3E50" 
-                              stroke-width="2"/>
-                        
-                        <!-- 劍形裝飾元素 -->
-                        <path d="M190 60 L210 60 L205 140 L195 140 Z" 
-                              fill="#95A5A6"/>
-                        <!-- 光芒效果 -->
-                        <circle cx="200" cy="80" r="60" 
-                                fill="url(#haloGradient)" 
-                                opacity="0.5"/>
-                      </svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 11.52 8.64">
+  <g id="_圖層_1-2" data-name="圖層 1">
+    <image width="48" height="36" transform="scale(.24)" xlink:href="data:image/png;base64,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"/>
+  </g>
+</svg>

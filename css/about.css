@@ -84,9 +84,9 @@ body {
   font-size: 24px;
   margin: 0 30px 0 60px;
   color: #5A4636;
-  font-weight: 900;
+  font-weight: 600;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-family: "Georgia", serif;
+  font-family: "Noto Sans TC", serif;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -335,14 +335,14 @@ body {
   margin-bottom: 5px;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .streamer-profile .profile-header .profile-info .profile-details .profile-link {
-  color: #e88382;
+  color: #D4AF37;
   text-decoration: none;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .streamer-profile .profile-header .profile-info .profile-details .profile-link:hover {
   text-decoration: underline;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .streamer-profile .profile-header .profile-info .follow-button {
-  background: #e88382;
+  background: #D4AF37;
   color: white;
   border: none;
   padding: 10px 25px;
@@ -351,7 +351,7 @@ body {
   transition: all 0.3s ease;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .streamer-profile .profile-header .profile-info .follow-button:hover {
-  background: #e05857;
+  background: #b29126;
   transform: translateY(-2px);
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .streamer-profile .profile-content {

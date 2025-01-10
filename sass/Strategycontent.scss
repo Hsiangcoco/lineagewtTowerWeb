@@ -41,9 +41,9 @@ body {
                 font-size: 24px; // LOGO 字體大小
                 margin: 0 30px 0 60px; // 與左側距離
                 color: #5A4636; // 深棕色字體，與背景形成良好對比
-                font-weight: 900; // 加粗字體，突顯 LOGO
+                font-weight: 600; // 加粗字體，突顯 LOGO
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); // 添加立體感的陰影
-                font-family: 'Georgia', serif; // 使用具有品牌感的字體（可替換）
+                font-family: "Noto Sans TC", serif;
                 letter-spacing: 1px; // 增加字母間距，提升辨識度
                 text-transform: uppercase; // 全部大寫，增加品牌感
 
@@ -206,6 +206,7 @@ body {
                     background-size: cover;
 
                     background-position: 0px;
+
                     @media (max-width:640px) {
                         height: 100px;
                     }
@@ -225,9 +226,11 @@ body {
                     @media (max-width:1440px) {
                         left: 300px;
                     }
+
                     @media (max-width:1024px) {
                         left: 150px;
                     }
+
                     @media (max-width:640px) {
                         left: 70px;
                     }
@@ -258,7 +261,7 @@ body {
 
                 @media (max-width:640px) {
                     width: 90vw;
-                    margin: 20px 3px ;
+                    margin: 20px 3px;
                 }
 
                 // 文章標題區
@@ -313,11 +316,15 @@ body {
 
 
                         #content-text {
+
                             .greeting {
                                 font-size: 18px;
                                 font-weight: bold;
                                 color: $primary-color;
                                 margin-bottom: 15px;
+                                letter-spacing: 1px;
+
+
                             }
 
                             .sub-text {

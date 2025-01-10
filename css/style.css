@@ -89,9 +89,9 @@ body {
   font-size: 24px;
   margin: 0 30px 0 60px;
   color: #5A4636;
-  font-weight: 900;
+  font-weight: 600;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-family: "Georgia", serif;
+  font-family: "Noto Sans TC", serif;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -263,7 +263,7 @@ body {
   z-index: 15 !important;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider .banner .banner-inner-wrapper .learn-more-button a:hover {
-  border-color: #e88382;
+  border-color: #D4AF37;
   transition: 0.3s;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider #top-banner-1,
@@ -621,9 +621,8 @@ body {
   /* 水平居中內容 */
 }
 .page-2 #LT-MainBk-all .LT-gamenews-bk-all .LT-gamenews-bk-sm-1 {
-  margin: 10px;
   width: 18%;
-  margin: 10px 50px;
+  margin: 20px 20px;
   box-sizing: border-box;
   background-color: #FFF7E0;
   border: 1px solid #D3A871;
