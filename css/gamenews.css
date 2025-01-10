@@ -159,7 +159,7 @@ body {
 }
 @media (max-width: 1024px) {
   .page-1 #LT-header .LT-topbar .LT-announcement {
-    width: 0%;
+    width: 50%;
     flex: 1 1 100%;
     margin-bottom: 10px;
   }
@@ -180,13 +180,15 @@ body {
 }
 .page-1 #LT-header .LT-topbar .LT-announcement .LT-announcement-1 p {
   font-size: 0.8rem;
-  color: red;
+  color: #D35D47;
   font-weight: bold;
 }
 .page-1 #LT-header .LT-topbar .LT-announcement .LT-announcement-scroll li {
   text-align: left;
   font-size: 0.8rem;
-  color: #5A4636;
+}
+.page-1 #LT-header .LT-topbar .LT-announcement .LT-announcement-scroll li a {
+  color: #5F4B32;
 }
 
 #gamenews-page-all {
@@ -294,6 +296,7 @@ body {
   }
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div {
+  position: relative;
   border: 2px solid;
   width: 40%;
   height: 40%;

@@ -182,13 +182,15 @@ body {
 }
 .page-1 #LT-header .LT-topbar .LT-announcement .LT-announcement-1 p {
   font-size: 0.8rem;
-  color: red;
+  color: #D35D47;
   font-weight: bold;
 }
 .page-1 #LT-header .LT-topbar .LT-announcement .LT-announcement-scroll li {
   text-align: left;
   font-size: 0.8rem;
-  color: #5A4636;
+}
+.page-1 #LT-header .LT-topbar .LT-announcement .LT-announcement-scroll li a {
+  color: #5F4B32;
 }
 .page-1 #LT-header .LT-bg-navbar-1 {
   border: 1px;
@@ -512,7 +514,7 @@ body {
     flex-direction: column;
   }
 }
-.page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item {
+.page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item a {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -523,7 +525,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
 }
-.page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item:hover {
+.page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item a:hover {
   transform: translateX(5px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
