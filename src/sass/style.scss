@@ -281,7 +281,7 @@ body {
                                             transition: all 0.3s;
 
                                             &:hover {
-                                                color: $secondary-color;
+                                                color: #DAA520;
                                             }
 
                                             .progressbar {
@@ -290,7 +290,7 @@ body {
                                                 left: 0;
                                                 height: 3px;
                                                 width: 100%;
-                                                background: $secondary-color;
+                                                background: #DAA520;
                                                 z-index: 999;
 
                                                 @media (max-width:640px) {
@@ -302,7 +302,7 @@ body {
                                                     width: inherit;
                                                     height: inherit;
                                                     margin-left: -100%;
-                                                    background: $secondary-color;
+                                                    background: #DAA520;
                                                 }
                                             }
                                         }
@@ -319,11 +319,11 @@ body {
 
                                         &~nav label:nth-of-type(#{$i}) {
                                             cursor: default;
-                                            color: $primary-color;
+                                            color: #fff;
                                             transition: all 0.5s;
 
                                             .progressbar {
-                                                background: $primary-color;
+                                                background: #fff;
 
                                                 .progressbar-fill {
                                                     animation: progressBarFill $animation-duration linear;

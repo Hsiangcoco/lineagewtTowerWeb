@@ -299,7 +299,7 @@ body {
   transition: all 0.3s;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider nav .controls label:hover {
-  color: #666;
+  color: #DAA520;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider nav .controls label .progressbar {
   position: absolute;
@@ -307,7 +307,7 @@ body {
   left: 0;
   height: 3px;
   width: 100%;
-  background: #666;
+  background: #DAA520;
   z-index: 999;
 }
 @media (max-width: 640px) {
@@ -320,7 +320,7 @@ body {
   width: inherit;
   height: inherit;
   margin-left: -100%;
-  background: #666;
+  background: #DAA520;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner1:checked ~ .slider #top-banner-1 {
   opacity: 1;
@@ -328,11 +328,11 @@ body {
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner1:checked ~ nav label:nth-of-type(1) {
   cursor: default;
-  color: #333;
+  color: #fff;
   transition: all 0.5s;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner1:checked ~ nav label:nth-of-type(1) .progressbar {
-  background: #333;
+  background: #fff;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner1:checked ~ nav label:nth-of-type(1) .progressbar .progressbar-fill {
   animation: progressBarFill 5s linear;
@@ -343,11 +343,11 @@ body {
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner2:checked ~ nav label:nth-of-type(2) {
   cursor: default;
-  color: #333;
+  color: #fff;
   transition: all 0.5s;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner2:checked ~ nav label:nth-of-type(2) .progressbar {
-  background: #333;
+  background: #fff;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner2:checked ~ nav label:nth-of-type(2) .progressbar .progressbar-fill {
   animation: progressBarFill 5s linear;
@@ -358,11 +358,11 @@ body {
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner3:checked ~ nav label:nth-of-type(3) {
   cursor: default;
-  color: #333;
+  color: #fff;
   transition: all 0.5s;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner3:checked ~ nav label:nth-of-type(3) .progressbar {
-  background: #333;
+  background: #fff;
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner3:checked ~ nav label:nth-of-type(3) .progressbar .progressbar-fill {
   animation: progressBarFill 5s linear;
