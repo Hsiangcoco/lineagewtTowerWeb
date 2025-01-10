@@ -206,6 +206,7 @@ body {
                     background-size: cover;
 
                     background-position: 0px;
+
                     @media (max-width:640px) {
                         height: 100px;
                     }
@@ -225,9 +226,11 @@ body {
                     @media (max-width:1440px) {
                         left: 300px;
                     }
+
                     @media (max-width:1024px) {
                         left: 150px;
                     }
+
                     @media (max-width:640px) {
                         left: 70px;
                     }
@@ -258,7 +261,7 @@ body {
 
                 @media (max-width:640px) {
                     width: 90vw;
-                    margin: 20px 3px ;
+                    margin: 20px 3px;
                 }
 
                 // 文章標題區
@@ -313,12 +316,14 @@ body {
 
 
                         #content-text {
-                            
+
                             .greeting {
                                 font-size: 18px;
                                 font-weight: bold;
                                 color: $primary-color;
-                                margin-bottom: 15px;                                letter-spacing: 30px;
+                                margin-bottom: 15px;
+                                letter-spacing: 1px;
+
 
                             }
 
