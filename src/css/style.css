@@ -202,6 +202,11 @@ body {
     flex-direction: column;
   }
 }
+@media (max-width: 640px) {
+  .page-1 #LT-header .LT-bg-navbar-1 {
+    display: flex;
+  }
+}
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop {
   padding-right: 30px;
 }
@@ -210,8 +215,168 @@ body {
     padding: 0px;
   }
 }
-.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .LT-Navbar-imgScroll {
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 {
+  position: relative;
+  height: 90vh;
+  width: 75vw;
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 {
+    width: 100vw;
+    height: 88vh;
+  }
+}
+@media (max-width: 640px) {
+  .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 {
+    width: 100%;
+    height: 250px;
+    margin-top: 15px;
+    object-fit: contain;
+  }
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner {
+  height: 100%;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider {
+  width: 100%;
+  height: 100%;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider input {
+  display: none;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider {
+  position: relative;
+  height: 100%;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 0;
+  height: 100%;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider .banner .banner-inner-wrapper .learn-more-button {
+  padding-bottom: 5em;
+  z-index: 15 !important;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider .banner .banner-inner-wrapper .learn-more-button a:hover {
+  border-color: #e88382;
+  transition: 0.3s;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider #top-banner-1,
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider #top-banner-2,
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider #top-banner-3 {
+  object-fit: cover;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider #top-banner-1 img,
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider #top-banner-2 img,
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider .slider #top-banner-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider nav {
+  position: absolute;
+  bottom: 0.5em;
+  width: 100%;
+  z-index: 10;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider nav .controls {
   display: flex;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider nav .controls label {
+  position: relative;
+  display: inline-block;
+  flex: 1;
+  height: 3.1em;
+  overflow: hidden;
+  margin: 0 1em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider nav .controls label:hover {
+  color: #DAA520;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider nav .controls label .progressbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #DAA520;
+  z-index: 999;
+}
+@media (max-width: 640px) {
+  .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider nav .controls label .progressbar {
+    top: 25px;
+  }
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider nav .controls label .progressbar .progressbar-fill {
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  margin-left: -100%;
+  background: #DAA520;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner1:checked ~ .slider #top-banner-1 {
+  opacity: 1;
+  z-index: 1;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner1:checked ~ nav label:nth-of-type(1) {
+  cursor: default;
+  color: #fff;
+  transition: all 0.5s;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner1:checked ~ nav label:nth-of-type(1) .progressbar {
+  background: #fff;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner1:checked ~ nav label:nth-of-type(1) .progressbar .progressbar-fill {
+  animation: progressBarFill 5s linear;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner2:checked ~ .slider #top-banner-2 {
+  opacity: 1;
+  z-index: 1;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner2:checked ~ nav label:nth-of-type(2) {
+  cursor: default;
+  color: #fff;
+  transition: all 0.5s;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner2:checked ~ nav label:nth-of-type(2) .progressbar {
+  background: #fff;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner2:checked ~ nav label:nth-of-type(2) .progressbar .progressbar-fill {
+  animation: progressBarFill 5s linear;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner3:checked ~ .slider #top-banner-3 {
+  opacity: 1;
+  z-index: 1;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner3:checked ~ nav label:nth-of-type(3) {
+  cursor: default;
+  color: #fff;
+  transition: all 0.5s;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner3:checked ~ nav label:nth-of-type(3) .progressbar {
+  background: #fff;
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .text-1 #banner .content-slider #banner3:checked ~ nav label:nth-of-type(3) .progressbar .progressbar-fill {
+  animation: progressBarFill 5s linear;
+}
+@keyframes progressBarFill {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+.page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .LT-Navbar-imgScroll {
+  display: none;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -366,6 +531,7 @@ body {
   .page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item {
     display: flex;
     flex-direction: unset;
+    margin-top: 15px;
   }
   .page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item:nth-child(n+4) {
     display: none;
