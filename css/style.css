@@ -202,6 +202,11 @@ body {
     flex-direction: column;
   }
 }
+@media (max-width: 640px) {
+  .page-1 #LT-header .LT-bg-navbar-1 {
+    display: flex;
+  }
+}
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop {
   padding-right: 30px;
 }
@@ -366,6 +371,7 @@ body {
   .page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item {
     display: flex;
     flex-direction: unset;
+    margin-top: 15px;
   }
   .page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item:nth-child(n+4) {
     display: none;
