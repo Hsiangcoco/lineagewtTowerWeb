@@ -174,16 +174,22 @@ body {
             .LT-bg-alltop {
                 padding-right: 30px;
 
+                @media (max-width:640px) {
+                    padding: 0px;
+                }
+
                 .LT-bk-all {
                     .LT-Navbar-imgScroll {
                         display: flex;
                         align-items: center;
                         justify-content: space-between; // 左右箭頭分佈在兩端
                         position: relative;
+
                         @media (max-width:640px) {
                             height: 36vh;
                             object-fit: contain;
                         }
+
                         a {
                             background-color: transparent !important;
 
@@ -216,6 +222,10 @@ body {
                         z-index: 999;
                         cursor: pointer;
 
+                        @media (max-width:640px) {
+                            top: 145px;
+                        }
+
                         &:hover {
                             transform: scale(1.1); // 卡片放大 1.05 倍
                             fill: $text-color; // 懸停時顏色改變
@@ -238,6 +248,9 @@ body {
                         position: absolute;
                         z-index: 999;
                         cursor: pointer;
+                        @media (max-width:640px) {
+                            top: 145px;
+                        }
 
                         &:hover {
                             transform: scale(1.1); // 卡片放大 1.05 倍
@@ -633,6 +646,9 @@ body {
                 height: 25vh;
                 gap: 20px;
                 transition: transform 0.8s ease-in-out;
+                @media (max-width:640px) {
+height: 100%;
+                }
 
 
 

@@ -205,6 +205,11 @@ body {
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop {
   padding-right: 30px;
 }
+@media (max-width: 640px) {
+  .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop {
+    padding: 0px;
+  }
+}
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .LT-Navbar-imgScroll {
   display: flex;
   align-items: center;
@@ -247,6 +252,11 @@ body {
   z-index: 999;
   cursor: pointer;
 }
+@media (max-width: 640px) {
+  .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .arrow-left {
+    top: 145px;
+  }
+}
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .arrow-left:hover {
   transform: scale(1.1);
   fill: #5A4636;
@@ -264,6 +274,11 @@ body {
   position: absolute;
   z-index: 999;
   cursor: pointer;
+}
+@media (max-width: 640px) {
+  .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .arrow-right {
+    top: 145px;
+  }
 }
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .arrow-right:hover {
   transform: scale(1.1);
@@ -604,6 +619,11 @@ body {
   height: 25vh;
   gap: 20px;
   transition: transform 0.8s ease-in-out;
+}
+@media (max-width: 640px) {
+  .page-3 .LT-guide-videos-section .LT-youtube-bk-all .youtube-carousel {
+    height: 100%;
+  }
 }
 .page-3 .LT-guide-videos-section .LT-youtube-bk-all .youtube-carousel a {
   flex: 0 0 20%;
