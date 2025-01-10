@@ -5,7 +5,7 @@ $(function () {
         scrollSpeed: 800, // 捲動速度(ms)
         pause: 3000 // 停頓時間(ms)
     });
-    $('.imgCycle').after('').cycle({
+    $('.imgCycle').cycle({
         fx: 'fade', //輪播方式
         sync: true, //有無前一張殘影
         delay: -3000, //輪播速度
@@ -89,15 +89,22 @@ $(function () {
 
     let resizeTimeout;
 
-    $(window).on('resize', function () {
-        clearTimeout(resizeTimeout); // 清除之前的計時器
+    let lastWidth = $(window).width();
+let threshold = 50; // 設定閾值，避免微小變化
+
+$(window).on('resize', function() {
+    clearTimeout(resizeTimeout);
     
-        resizeTimeout = setTimeout(function () {
-            if ($(window).width() > 1024) { // 僅當視窗寬度大於 1024px 時執行
-                location.reload(); // 延遲執行，避免頻繁重載
-            }
-        }, 300); // 延遲 300 毫秒
-    });
+    resizeTimeout = setTimeout(function() {
+        const currentWidth = $(window).width();
+        
+        // 只在寬度變化超過閾值時才重新整理
+        if (Math.abs(currentWidth - lastWidth) > threshold) {
+            lastWidth = currentWidth;
+            location.reload();
+        }
+    }, 300);
+});
 
     // 檢查是否是第一次載入頁面
     if (!sessionStorage.getItem('pageLoaded')) {
