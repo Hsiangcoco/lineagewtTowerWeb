@@ -99,6 +99,16 @@ $(function () {
         }, 300); // 延遲 300 毫秒
     });
 
+    $(function() {
+        // 檢查是否是第一次載入頁面
+        if (!sessionStorage.getItem('pageLoaded')) {
+            // 設置標記，表示頁面已經載入過
+            sessionStorage.setItem('pageLoaded', 'true');
+            // 執行重新整理
+            location.reload();
+        }
+    });
+
 
     function loadMore() {
         // 原始資料模板
