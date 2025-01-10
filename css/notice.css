@@ -371,7 +371,7 @@ body {
   margin-bottom: 8px;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .sales-info .price-note {
-  color: #D4AF37;
+  color: #e88382;
   font-size: 14px;
   font-weight: bold;
 }
@@ -427,7 +427,7 @@ body {
   content: "※";
   position: absolute;
   left: 0;
-  color: #D4AF37;
+  color: #e88382;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .ad-section {
   margin: 40px 0;
@@ -462,12 +462,12 @@ body {
   transition: color 0.3s ease;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .related-articles ul li a:hover {
-  color: #D4AF37;
+  color: #e88382;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .related-articles ul li a::before {
   content: "✓";
   margin-right: 8px;
-  color: #D4AF37;
+  color: #e88382;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-right {
   width: 20vw;

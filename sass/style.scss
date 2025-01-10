@@ -170,6 +170,7 @@ body {
                 margin: 0px;
                 flex-direction: column;
             }
+
             @media (max-width:640px) {
                 display: flex;
             }
@@ -182,8 +183,170 @@ body {
                 }
 
                 .LT-bk-all {
+
+                    // 主要樣式
+                    .text-1 {
+                        margin-top: 15px;
+                        position: relative;
+                        height: 90vh;
+                        width: 75vw;
+                        border-radius: 15px;
+                        overflow: hidden;
+
+                        @media (max-width:1024px) {
+                            width: 100vw;
+                            height: 88vh;
+                        }
+
+                        @media (max-width:640px) {
+                            width: 100%;
+                            height: 250px;
+                            object-fit: contain;
+                        }
+
+                        #banner {
+                            height: 100%;
+
+                            .content-slider {
+                                width: 100%;
+                                height: 100%;
+
+                                input {
+                                    display: none;
+                                }
+
+                                .slider {
+
+                                    position: relative;
+                                    height: 100%;
+
+                                    .banner {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        opacity: 0;
+                                        z-index: 0;
+
+                                        height: 100%;
+
+                                        .banner-inner-wrapper {
+                                            .learn-more-button {
+                                                padding-bottom: 5em;
+                                                z-index: 15 !important;
+
+                                                a {
+                                                    &:hover {
+                                                        border-color: $accent-color;
+                                                        transition: 0.3s;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    #top-banner-1,
+                                    #top-banner-2,
+                                    #top-banner-3 {
+                                        object-fit: cover;
+
+                                        img {
+                                            width: 100%; // 圖片寬度填滿父容器
+                                            height: 100%; // 圖片高度填滿父容器
+                                            object-fit: cover; // 確保圖片以裁剪方式適應框大小
+                                            object-position: center; // 圖片內容居中
+                                        }
+
+                                    }
+                                }
+
+                                nav {
+                                    position: absolute;
+                                    bottom: 0.5em;
+                                    width: 100%;
+                                    z-index: 10;
+
+                                    .controls {
+                                        display: flex;
+
+                                        label {
+                                            position: relative;
+                                            display: inline-block;
+                                            flex: 1;
+                                            height: $nav-height;
+                                            overflow: hidden;
+                                            margin: 0 1em;
+                                            cursor: pointer;
+                                            transition: all 0.3s;
+
+                                            &:hover {
+                                                color: $secondary-color;
+                                            }
+
+                                            .progressbar {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                height: 3px;
+                                                width: 100%;
+                                                background: $secondary-color;
+                                                z-index: 999;
+
+                                                @media (max-width:640px) {
+                                                    top: 25px;
+                                                }
+
+                                                .progressbar-fill {
+                                                    position: inherit;
+                                                    width: inherit;
+                                                    height: inherit;
+                                                    margin-left: -100%;
+                                                    background: $secondary-color;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // Radio按鈕狀態
+                                @for $i from 1 through 3 {
+                                    #banner#{$i}:checked {
+                                        &~.slider #top-banner-#{$i} {
+                                            opacity: 1;
+                                            z-index: 1;
+                                        }
+
+                                        &~nav label:nth-of-type(#{$i}) {
+                                            cursor: default;
+                                            color: $primary-color;
+                                            transition: all 0.5s;
+
+                                            .progressbar {
+                                                background: $primary-color;
+
+                                                .progressbar-fill {
+                                                    animation: progressBarFill $animation-duration linear;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // 動畫
+                    @keyframes progressBarFill {
+                        from {
+                            margin-left: -100%;
+                        }
+
+                        to {
+                            margin-left: 0;
+                        }
+                    }
+
                     .LT-Navbar-imgScroll {
-                        display: flex;
+                        display: none;
                         align-items: center;
                         justify-content: space-between; // 左右箭頭分佈在兩端
                         position: relative;
@@ -251,6 +414,7 @@ body {
                         position: absolute;
                         z-index: 999;
                         cursor: pointer;
+
                         @media (max-width:640px) {
                             top: 145px;
                         }
@@ -356,7 +520,8 @@ body {
                         @media (max-width:1024px) {
                             display: flex;
                             flex-direction: unset;
-margin-top: 15px;
+                            margin-top: 15px;
+
                             &:nth-child(n+4) {
                                 display: none;
                             }
@@ -649,8 +814,9 @@ margin-top: 15px;
                 height: 25vh;
                 gap: 20px;
                 transition: transform 0.8s ease-in-out;
+
                 @media (max-width:640px) {
-height: 100%;
+                    height: 100%;
                 }
 
 

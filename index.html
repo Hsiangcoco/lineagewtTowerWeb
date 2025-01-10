@@ -8,7 +8,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- 插件js -->
+
     <script src="./js/jquery.cycle.all.js"></script>
+    <script src="./js/carousel.js"></script>
     <script type="text/javascript" src="./js/jquery.textslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
@@ -30,6 +32,7 @@
 </head>
 
 <body>
+
     <header class="page-1">
         <section id="LT-header">
             <div class="LT-topbar">
@@ -72,9 +75,49 @@
             <div class="LT-bg-navbar-1">
                 <div class="LT-bg-alltop">
                     <div class="LT-bk-all">
+                        <div class="text-1">
+                            <section id="banner"> <!-- 換圖輪播 -->
+                                <div class="content-slider">
+                                    <!-- 張數提示器 -->
+                                    <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+                                    <input type="radio" id="banner2" class="sec-1-input" name="banner">
+                                    <input type="radio" id="banner3" class="sec-1-input" name="banner">
+                                    <!-- 主要輪播曲 -->
+                                    <div class="slider">
+                                        <div id="top-banner-1" class="banner">
+                                            <a href="">
+                                                <img src="./images/navbar-img-1.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div id="top-banner-2" class="banner">
+                                            <a href="">
+                                                <img src="./images/navbar-img-2.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div id="top-banner-3" class="banner">
+                                            <a href="">
+                                                <img src="./images/navbar-img-3.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--  底部按鈕區 -->
+                                    <nav>
+                                        <div class="controls">
+                                            <label for="banner1"><span class="progressbar"><span
+                                                        class="progressbar-fill"></span></span><!-- <span>01 News</span> -->
+                                            </label>
+                                            <label for="banner2"><span class="progressbar"><span
+                                                        class="progressbar-fill"></span></span><!-- <span>02 Service</span> -->
+                                            </label>
+                                            <label for="banner3"><span class="progressbar"><span
+                                                        class="progressbar-fill"></span></span><!-- <span>03 About Ous</span> -->
+                                            </label>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </section>
+                        </div>
                         <div class="LT-Navbar-imgScroll">
-                            
-
                             <div class="imgCycle">
                                 <a href="#">
                                     <img class="navbar-img1" src="./images/navbar-img-1.png" alt="Slide 1">
@@ -87,10 +130,10 @@
                                 </a>
                             </div>
                             <svg class="arrow-left" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                            viewBox="0 0 24 24">
-                            <path class="arrowleftcolor"
-                                d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-                        </svg>
+                                viewBox="0 0 24 24">
+                                <path class="arrowleftcolor"
+                                    d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+                            </svg>
                             <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
                                 viewBox="0 0 24 24">
                                 <path class="arrowleftcolor"
