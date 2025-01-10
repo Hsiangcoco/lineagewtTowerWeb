@@ -220,7 +220,9 @@ body {
                     color: #FFD96E;
                     /* 字間距 */
                     letter-spacing: 30px;
-
+                    @media (min-width:1920px) {
+                        left: 700px;
+                    }
                     @media (max-width:1440px) {
                         left: 300px;
                     }
@@ -259,8 +261,7 @@ body {
                     height: 100%;
                 }
 
-                >div {
-                    border: 2px solid;
+                >a {
                     width: calc(40%);
                     height: 40%;
                     margin-right: 30px;

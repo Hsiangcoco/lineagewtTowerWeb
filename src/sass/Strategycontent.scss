@@ -224,7 +224,9 @@ body {
                     color: #FFD96E;
                     /* 字間距 */
                     letter-spacing: 30px;
-
+                    @media (min-width:1920px) {
+                        left: 700px;
+                    }
                     @media (max-width:1440px) {
                         left: 300px;
                     }
@@ -254,7 +256,7 @@ body {
             }
 
             .gamenews-content-bg {
-                max-width: 1200px;
+                width: 100%;
                 margin: 30px 0;
                 padding: 20px;
                 background-color: $bg-color;

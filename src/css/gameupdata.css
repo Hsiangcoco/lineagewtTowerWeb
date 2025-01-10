@@ -253,6 +253,11 @@ body {
   /* 字間距 */
   letter-spacing: 30px;
 }
+@media (min-width: 1920px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
+    left: 700px;
+  }
+}
 @media (max-width: 1440px) {
   #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
     left: 300px;
@@ -295,8 +300,7 @@ body {
     height: 100%;
   }
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div {
-  border: 2px solid;
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a {
   width: 40%;
   height: 40%;
   margin-right: 30px;
@@ -311,18 +315,18 @@ body {
   transition: transform 0.3s ease;
 }
 @media (max-width: 640px) {
-  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a {
     width: 100%;
     margin-top: 15px;
   }
-  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div:nth-child(n+3) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a:nth-child(n+3) {
     display: none;
   }
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div:hover {
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a:hover {
   transform: translateY(-5px);
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div:before {
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a:before {
   content: "";
   position: absolute;
   top: 0;
