@@ -240,6 +240,7 @@ body {
 }
 @media (max-width: 640px) {
   .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .LT-Navbar-imgScroll a .navbar-img1 {
+    height: 100%;
     object-fit: contain;
   }
 }
