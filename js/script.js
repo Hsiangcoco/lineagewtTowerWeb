@@ -91,10 +91,11 @@ $(function () {
 
     $(window).on('resize', function () {
         clearTimeout(resizeTimeout); // 清除之前的計時器
-
+    
         resizeTimeout = setTimeout(function () {
-            // 僅當視窗寬度大於 1024px 時執行
-            location.reload(); // 延遲執行，避免頻繁重載
+            if ($(window).width() > 1024) { // 僅當視窗寬度大於 1024px 時執行
+                location.reload(); // 延遲執行，避免頻繁重載
+            }
         }, 300); // 延遲 300 毫秒
     });
 
