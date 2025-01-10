@@ -65,7 +65,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   /* 允許換行 */
-  height: 8vh;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   .page-1 #LT-header .LT-topbar {
@@ -252,6 +252,11 @@ body {
   color: #FFD96E;
   /* 字間距 */
   letter-spacing: 30px;
+}
+@media (min-width: 1920px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
+    left: 700px;
+  }
 }
 @media (max-width: 1440px) {
   #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {

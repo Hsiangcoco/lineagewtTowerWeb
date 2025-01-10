@@ -65,7 +65,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   /* 允許換行 */
-  height: 8vh;
+  height: 100%;
 }
 @media (max-width: 1024px) {
   .page-1 #LT-header .LT-topbar {
@@ -130,9 +130,6 @@ body {
   justify-content: flex-start;
   font-weight: 500;
   margin-right: 50px;
-}
-.page-1 #LT-header .LT-topbar .LT-Navber a {
-  text-decoration: none;
 }
 .page-1 #LT-header .LT-topbar .LT-Navber a p {
   margin: 15px;
@@ -253,6 +250,11 @@ body {
   /* 字間距 */
   letter-spacing: 30px;
 }
+@media (min-width: 1920px) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
+    left: 700px;
+  }
+}
 @media (max-width: 1440px) {
   #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
     left: 300px;
@@ -295,15 +297,15 @@ body {
     height: 100%;
   }
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div {
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a {
   position: relative;
-  border: 2px solid;
   width: 40%;
   height: 40%;
   margin-right: 30px;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
+  border-color: none;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -312,18 +314,18 @@ body {
   transition: transform 0.3s ease;
 }
 @media (max-width: 640px) {
-  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a {
     width: 100%;
     margin-top: 15px;
   }
-  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div:nth-child(n+3) {
+  #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a:nth-child(n+3) {
     display: none;
   }
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div:hover {
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a:hover {
   transform: translateY(-5px);
 }
-#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > div:before {
+#gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-hotnote > a:before {
   content: "";
   position: absolute;
   top: 0;

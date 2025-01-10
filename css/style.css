@@ -60,10 +60,6 @@ body {
   font-family: "Noto Sans TC";
 }
 
-.page-1 {
-  min-height: 100vh;
-  /* 自適應內容高度，至少占滿一屏 */
-}
 .page-1 #LT-header .LT-topbar {
   display: flex;
   justify-content: start;

@@ -22,7 +22,7 @@ body {
             flex-wrap: wrap;
             /* 允許換行 */
 
-            height: 8vh; // 設置高度
+            width: 100%;
 
             @media (max-width:1024px) {
                 height: 100%;
@@ -223,7 +223,9 @@ body {
                     color: #FFD96E;
                     /* 字間距 */
                     letter-spacing: 30px;
-
+                    @media (min-width:1920px) {
+                        left: 700px;
+                    }
                     @media (max-width:1440px) {
                         left: 300px;
                     }
