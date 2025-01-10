@@ -122,7 +122,7 @@ body {
                 border-radius: 5px;
 
                 @media (max-width:1024px) {
-                    width: 0%;
+                    width: 50%;
                     flex: 1 1 100%;
                     margin-bottom: 10px;
                 }
@@ -141,7 +141,7 @@ body {
 
                     p {
                         font-size: $font-size-xs; // 小字體大小
-                        color: $error-color; // 錯誤文字顏色
+                        color: #D35D47; // 錯誤文字顏色
                         font-weight: bold;
 
                     }
@@ -150,10 +150,13 @@ body {
                 .LT-announcement-scroll {
 
                     li {
-
                         text-align: left;
                         font-size: $font-size-xs; // 小字體大小
-                        color: $text-color; // 文字顏色
+
+                        a {
+                            color: #5F4B32; // 文字顏色
+
+                        }
                     }
                 }
             }
@@ -163,10 +166,12 @@ body {
 
 #gamenews-page-all {
     margin: 0 50px;
+
     @media (max-width:640px) {
         margin: 20px;
         width: 90vw;
     }
+
     #gamenews-page-2 {
         display: flex;
         justify-content: space-around;
@@ -203,6 +208,7 @@ body {
                     background-size: cover;
 
                     background-position: 0px;
+
                     @media (max-width:640px) {
                         height: 100px;
                     }
@@ -222,9 +228,11 @@ body {
                     @media (max-width:1440px) {
                         left: 300px;
                     }
+
                     @media (max-width:1024px) {
                         left: 150px;
                     }
+
                     @media (max-width:640px) {
                         left: 70px;
                     }
@@ -246,6 +254,7 @@ body {
             }
 
             .gamenews-hotnote {
+
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
@@ -257,7 +266,10 @@ body {
                     height: 100%;
                 }
 
+
+
                 >div {
+                    position: relative;
                     border: 2px solid;
                     width: calc(40%);
                     height: 40%;
@@ -435,7 +447,8 @@ body {
                     text-overflow: ellipsis;
                     overflow: hidden;
                     cursor: pointer;
-                    a{
+
+                    a {
                         color: #000;
                     }
 

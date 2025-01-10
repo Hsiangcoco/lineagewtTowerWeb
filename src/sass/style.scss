@@ -143,7 +143,7 @@ body {
 
                     p {
                         font-size: $font-size-xs; // 小字體大小
-                        color: $error-color; // 錯誤文字顏色
+                        color: #D35D47; // 錯誤文字顏色
                         font-weight: bold;
 
                     }
@@ -152,10 +152,13 @@ body {
                 .LT-announcement-scroll {
 
                     li {
-
                         text-align: left;
                         font-size: $font-size-xs; // 小字體大小
-                        color: $text-color; // 文字顏色
+
+                        a {
+                            color: #5F4B32; // 文字顏色
+
+                        }
                     }
                 }
             }
@@ -504,20 +507,23 @@ body {
                     }
 
                     .log-item {
-                        cursor: pointer;
-                        display: flex;
-                        align-items: center;
-                        background-color: $item-background; // 條目背景色
-                        border-radius: 10px;
-                        border: 1px solid $border-color; // 添加邊框
-                        padding: 15px;
-                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 淡淡的陰影效果
-                        transition: all 0.2s ease;
+                        a {
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            background-color: $item-background; // 條目背景色
+                            border-radius: 10px;
+                            border: 1px solid $border-color; // 添加邊框
+                            padding: 15px;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 淡淡的陰影效果
+                            transition: all 0.2s ease;
 
-                        &:hover {
-                            transform: translateX(5px);
-                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                            &:hover {
+                                transform: translateX(5px);
+                                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                            }
                         }
+
 
                         @media (max-width:1024px) {
                             display: flex;
