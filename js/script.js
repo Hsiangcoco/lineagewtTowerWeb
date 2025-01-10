@@ -87,10 +87,6 @@ $(function () {
 
     let resizeTimeout;
 
-    if (!document.referrer || document.referrer !== location.href) {
-        location.reload();
-    }
-
     $(window).on('resize', function () {
         clearTimeout(resizeTimeout); // 清除之前的計時器
     

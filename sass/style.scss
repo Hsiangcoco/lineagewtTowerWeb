@@ -24,14 +24,14 @@ body {
             flex-wrap: wrap;
             /* 允許換行 */
 
-            height: 8vh; // 設置高度
+            height: 100%; // 設置高度
 
             @media (max-width:1024px) {
-                height: 12vh;
+                height: 100%;
             }
 
             @media (max-width:640px) {
-                height: 25vh;
+                height: 100%;
             }
 
 
@@ -64,6 +64,7 @@ body {
                     }
 
                 }
+
                 @media (max-width:1024px) {
                     margin: 0 15px 0 15px;
                     flex: 1 1 100%;
@@ -179,7 +180,10 @@ body {
                         align-items: center;
                         justify-content: space-between; // 左右箭頭分佈在兩端
                         position: relative;
-
+                        @media (max-width:640px) {
+                            height: 36vh;
+                            object-fit: contain;
+                        }
                         a {
                             background-color: transparent !important;
 
@@ -196,7 +200,7 @@ body {
                                 }
 
                                 @media (max-width:640px) {
-                                    height: 36vh;
+                                    height: 100%;
                                     object-fit: contain;
                                 }
                             }

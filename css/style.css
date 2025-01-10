@@ -70,16 +70,16 @@ body {
   align-items: center;
   flex-wrap: wrap;
   /* 允許換行 */
-  height: 8vh;
+  height: 100%;
 }
 @media (max-width: 1024px) {
   .page-1 #LT-header .LT-topbar {
-    height: 12vh;
+    height: 100%;
   }
 }
 @media (max-width: 640px) {
   .page-1 #LT-header .LT-topbar {
-    height: 25vh;
+    height: 100%;
   }
 }
 .page-1 #LT-header .LT-topbar .LT-title {
@@ -211,6 +211,12 @@ body {
   justify-content: space-between;
   position: relative;
 }
+@media (max-width: 640px) {
+  .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .LT-Navbar-imgScroll {
+    height: 36vh;
+    object-fit: contain;
+  }
+}
 .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .LT-Navbar-imgScroll a {
   background-color: transparent !important;
 }
@@ -229,7 +235,7 @@ body {
 }
 @media (max-width: 640px) {
   .page-1 #LT-header .LT-bg-navbar-1 .LT-bg-alltop .LT-bk-all .LT-Navbar-imgScroll a .navbar-img1 {
-    height: 36vh;
+    height: 100%;
     object-fit: contain;
   }
 }
