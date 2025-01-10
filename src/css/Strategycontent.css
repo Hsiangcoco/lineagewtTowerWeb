@@ -84,9 +84,9 @@ body {
   font-size: 24px;
   margin: 0 30px 0 60px;
   color: #5A4636;
-  font-weight: 900;
+  font-weight: 600;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  font-family: "Georgia", serif;
+  font-family: "Noto Sans TC", serif;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -302,12 +302,12 @@ body {
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-header .guide-title {
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: #333;
   margin-bottom: 10px;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-header .guide-date {
   font-size: 14px;
-  color: #DAA520;
+  color: #666;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content {
   display: flex;
@@ -341,11 +341,12 @@ body {
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #content-text .greeting {
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
+  color: #333;
   margin-bottom: 15px;
+  letter-spacing: 30px;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #content-text .sub-text {
-  color: #DAA520;
+  color: #666;
   margin-bottom: 10px;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #content-text #product-info {
@@ -355,7 +356,7 @@ body {
   margin: 20px 0;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #content-text #product-info h2 {
-  color: #e88382;
+  color: #D4AF37;
   margin-bottom: 15px;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #content-text #product-info .info-list {
@@ -371,7 +372,7 @@ body {
   content: "■";
   position: absolute;
   left: 0;
-  color: #e88382;
+  color: #D4AF37;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #content-text #product-info .note {
   color: #c00;
@@ -385,7 +386,7 @@ body {
   margin: 20px 0;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #reward-info h3 {
-  color: #e88382;
+  color: #D4AF37;
   margin: 15px 0;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main #reward-info .content-list {
@@ -408,7 +409,7 @@ body {
   border-top: 2px solid rgba(74, 59, 36, 0.2);
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main .related-guides h3 {
-  color: #fff;
+  color: #333;
   margin-bottom: 15px;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main .related-guides .guide-links {
@@ -427,7 +428,7 @@ body {
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main .related-guides .guide-links li a::before {
   content: "✓";
   margin-right: 8px;
-  color: #e88382;
+  color: #D4AF37;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .content-main .related-guides .guide-links li a:hover {
   color: #004d99;
@@ -463,14 +464,14 @@ body {
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .guide-nav .sticky .nav-list li .nav-link {
   display: block;
   padding: 10px;
-  color: #fff;
+  color: #333;
   text-decoration: none;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .guide-nav .sticky .nav-list li .nav-link:hover {
-  background: rgba(232, 131, 130, 0.1);
-  color: #e88382;
+  background: rgba(212, 175, 55, 0.1);
+  color: #D4AF37;
 }
 #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-content-bg .guide-content .floating-nav {
   display: none;

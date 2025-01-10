@@ -43,9 +43,9 @@ body {
                 font-size: 24px; // LOGO 字體大小
                 margin: 0 30px 0 60px; // 與左側距離
                 color: #5A4636; // 深棕色字體，與背景形成良好對比
-                font-weight: 900; // 加粗字體，突顯 LOGO
+                font-weight: 600; // 加粗字體，突顯 LOGO
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); // 添加立體感的陰影
-                font-family: 'Georgia', serif; // 使用具有品牌感的字體（可替換）
+                font-family: "Noto Sans TC", serif;
                 letter-spacing: 1px; // 增加字母間距，提升辨識度
                 text-transform: uppercase; // 全部大寫，增加品牌感
 
@@ -104,6 +104,7 @@ body {
                         color: $text-color; // 文字色
 
                         &:hover {
+
                             background-color: $color-secondary-1; // 懸停背景色
                             color: $color-secondary; // 懸停文字色
                             box-shadow: 2px 2px rgba(0, 0, 0, 0.2); // 輕微陰影
@@ -604,6 +605,7 @@ body {
             color: #5A4636;
             /* 深棕色文字 */
             margin-bottom: 10px;
+
             &:after {
                 content: '';
                 display: block;
@@ -630,9 +632,8 @@ body {
 
 
             .LT-gamenews-bk-sm-1 {
-                margin: 10px;
                 width: calc(18%); // 每行最多 4 個，減去間距
-                margin: 10px 50px; // 增加卡片間距
+                margin: 20px 20px; // 增加卡片間距
                 box-sizing: border-box; // 確保 padding 不影響大小
                 background-color: #FFF7E0; // 調整為柔和的奶油色背景
                 border: 1px solid #D3A871; // 使用金棕色作為卡片邊框
@@ -742,7 +743,7 @@ body {
         border-radius: 15px;
         margin: 50px auto;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        
+
 
         .guide-videos-title {
             font-size: 2rem;
@@ -750,6 +751,7 @@ body {
             text-align: center;
             color: #5A4636;
             margin-bottom: 10px;
+
             &:after {
                 content: '';
                 display: block;

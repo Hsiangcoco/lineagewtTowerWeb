@@ -87,33 +87,6 @@ $(function () {
         offset: '20%' /* offset 整數預設為像素不能加引號 ％要加引號 */
     });
 
-    let resizeTimeout;
-
-    let lastWidth = $(window).width();
-let threshold = 50; // 設定閾值，避免微小變化
-
-$(window).on('resize', function() {
-    clearTimeout(resizeTimeout);
-    
-    resizeTimeout = setTimeout(function() {
-        const currentWidth = $(window).width();
-        
-        // 只在寬度變化超過閾值時才重新整理
-        if (Math.abs(currentWidth - lastWidth) > threshold) {
-            lastWidth = currentWidth;
-            location.reload();
-        }
-    }, 300);
-});
-
-    // 檢查是否是第一次載入頁面
-    if (!sessionStorage.getItem('pageLoaded')) {
-        // 設置標記，表示頁面已經載入過
-        sessionStorage.setItem('pageLoaded', 'true');
-        // 執行重新整理
-        location.reload();
-    }
-
 
 
     function loadMore() {
