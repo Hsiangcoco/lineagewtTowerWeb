@@ -535,6 +535,12 @@ body {
     display: none;
   }
 }
+@media (max-width: 640px) {
+  .page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .page-1 #LT-header .LT-bk-all-1 .update-log .log-content .log-item .log-date {
   font-size: 16px;
   color: #5A4636;

@@ -526,6 +526,10 @@ body {
                                 display: none;
                             }
                         }
+                        @media (max-width:640px) {
+                            display: flex;
+                            flex-direction: column;
+                        }
 
                         // 日期區塊
                         .log-date {

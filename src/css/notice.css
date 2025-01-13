@@ -255,7 +255,7 @@ body {
 }
 @media (min-width: 1920px) {
   #gamenews-page-all #gamenews-page-2 .gamenews-page-left .gamenews-left-top-1 p {
-    left: 700px;
+    left: 500px;
   }
 }
 @media (max-width: 1440px) {
