@@ -8,7 +8,6 @@ body {
     background-image: url(../images/backimg-2.png);
     background-color: #f0Daae;
     background-size: cover;
-
 }
 
 
@@ -221,7 +220,7 @@ body {
                     /* 字間距 */
                     letter-spacing: 30px;
                     @media (min-width:1920px) {
-                        left: 700px;
+                        left: 500px;
                     }
                     @media (max-width:1440px) {
                         left: 300px;
